@@ -32,8 +32,8 @@ entry(
     label = "multiplebond_intra",
     group = 
 """
-1 *2 [Cd,Ct,CO,N]     u0 {2,[D,T]}
-2 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {1,[D,T]}
+1 *2 [Cd,Ct,Cb,CO,N]     u0 {2,[D,T,B]}
+2 *3 [Cd,Ct,Cb,Od,Sd,Cdd,N] u0 {1,[D,T,B]}
 """,
     kinetics = None,
 )
@@ -2511,6 +2511,67 @@ entry(
 )
 
 entry(
+    index = 400,
+    label = "benzenebond_intra",
+    group =
+"""
+1 *2 Cb u0 {2,B}
+2 *3 Cb u0 {1,B}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 401,
+    label = "benzenebond_intra_R",
+    group =
+"""
+1 *2 Cb  u0 {2,B} {3,S}
+2 *3 Cb  u0 {1,B}
+3    R!H u0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 402,
+    label = "benzenebond_intra_RH",
+    group =
+"""
+1 *2 Cb  u0 {2,B} {3,S}
+2 *3 Cb  u0 {1,B} {4,S}
+3    R!H u0 {1,S}
+4    H   u0 {2,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 403,
+    label = "benzenebond_intra_H",
+    group =
+"""
+1 *2 Cb u0 {2,B} {3,S}
+2 *3 Cb u0 {1,B}
+3    H  u0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 404,
+    label = "benzenebond_intra_HH",
+    group =
+"""
+1 *2 Cb u0 {2,B} {3,S}
+2 *3 Cb u0 {1,B} {4,S}
+3    H  u0 {1,S}
+4    H  u0 {2,S}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 227,
     label = "radadd_intra_cs",
     group = 
@@ -2909,6 +2970,11 @@ L1: multiplebond_intra
         L3: carbonylbond_intra_H
         L3: carbonylbond_intra_Nd
         L3: carbonylbond_intra_De
+    L2: benzenebond_intra
+        L3: benzenebond_intra_R
+            L4: benzenebond_intra_RH
+        L3: benzenebond_intra_H
+            L4: benzenebond_intra_HH
 L1: radadd_intra
     L2: radadd_intra_cs
         L3: radadd_intra_cs2H
