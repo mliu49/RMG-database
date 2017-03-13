@@ -693,19 +693,6 @@ Taken from entry: C3H4p + BD2YL <=> prod_16
 )
 
 entry(
-    index = 41,
-    label = "C7H9-22 <=> C7H8-12 + H",
-    degeneracy = 1,
-    kinetics = Arrhenius(A=(6.47e+10, 's^-1'), n=1.22, Ea=(45.7, 'kcal/mol'), T0=(1, 'K')),
-    rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: C3""",
-    longDesc = 
-u"""
-Taken from entry: prod_17 <=> prod_18 + H
-""",
-)
-
-entry(
     index = 42,
     label = "C3H4-3 + allyl <=> C6H9-5",
     degeneracy = 1,
@@ -1526,18 +1513,18 @@ Taken from entry: c6-C6H9 <=> H + C6H8-c6-14
 """,
 )
 
-entry(
-    index = 97,
-    label = "C6H9-11 <=> C5H6-2 + CH3",
-    degeneracy = 1,
-    kinetics = Arrhenius(A=(4.961e+11, 's^-1'), n=0.717, Ea=(38.962, 'kcal/mol'), T0=(1, 'K')),
-    rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: 2015_Buras_Vinyl_1_3_Butadiene""",
-    longDesc = 
-u"""
-Taken from entry: c5-C6H9-2 <=> C5H6 + CH3
-""",
-)
+# entry(
+#     index = 97,
+#     label = "C6H9-11 <=> C5H6-2 + CH3",
+#     degeneracy = 1,
+#     kinetics = Arrhenius(A=(4.961e+11, 's^-1'), n=0.717, Ea=(38.962, 'kcal/mol'), T0=(1, 'K')),
+#     rank = 3,
+#     shortDesc = u"""Training reaction from kinetics library: 2015_Buras_Vinyl_1_3_Butadiene""",
+#     longDesc =
+# u"""
+# Taken from entry: c5-C6H9-2 <=> C5H6 + CH3
+# """,
+# )
 
 
 
@@ -1913,6 +1900,942 @@ entry(
     longDesc = 
 u"""
 Taken from entry: benzene(1) + C3H3(9) <=> C9H9(2)
+""",
+)
+
+
+
+entry(
+    index = 121,
+    label = "C7H9-23 <=> C7H8-13 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(6.47e+10, 's^-1'), n=1.22, Ea=(45.7, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C3""",
+    longDesc = 
+u"""
+Taken from entry: prod_17 <=> prod_18 + H
+""",
+)
+
+
+
+entry(
+    index = 122,
+    label = "C9H8-5 + CH3 <=> C10H11-15",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(643, 'cm^3/(mol*s)'), n=2.8, Ea=(8.6, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H11""",
+    longDesc = 
+u"""
+Taken from entry: INDENE + CH3 <=> pdt27
+""",
+)
+
+
+
+entry(
+    index = 123,
+    label = "C10H10-10 + H <=> C10H11-16",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (2.4e+08, 'cm^3/(mol*s)'),
+        n = 1.58,
+        Ea = (1.6, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H11""",
+    longDesc = 
+u"""
+Taken from entry: pdt13 + H <=> pdt25
+""",
+)
+
+entry(
+    index = 124,
+    label = "C10H10-11 + H <=> C10H11-17",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (7.61e+07, 'cm^3/(mol*s)'),
+        n = 1.71,
+        Ea = (4.7, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H11""",
+    longDesc = 
+u"""
+Taken from entry: pdt38 + H <=> pdt37
+""",
+)
+
+
+
+entry(
+    index = 125,
+    label = "C7H9-24 <=> C7H8-14 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1.06e+10, 's^-1'), n=1.26, Ea=(28.1, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: vinylCPD_H""",
+    longDesc = 
+u"""
+Taken from entry: product20 <=> TOLUENE + H
+""",
+)
+
+
+
+entry(
+    index = 126,
+    label = "C8H6O + H <=> C8H7O",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (1.595e+08, 'cm^3/(mol*s)'),
+        n = 1.566,
+        Ea = (4.155, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3""",
+    longDesc = 
+u"""
+Taken from entry: p3 + H <=> i5
+""",
+)
+
+
+
+entry(
+    index = 127,
+    label = "C8H6O-2 + H <=> C8H7O-2",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (2.179e+08, 'cm^3/(mol*s)'),
+        n = 1.544,
+        Ea = (3.763, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3""",
+    longDesc = 
+u"""
+Taken from entry: p3 + H <=> i4_9
+""",
+)
+
+entry(
+    index = 128,
+    label = "C8H6O-3 + H <=> C8H7O-3",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (2959, 'cm^3/(mol*s)'),
+        n = 2.968,
+        Ea = (13.101, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3""",
+    longDesc = 
+u"""
+Taken from entry: p3 + H <=> i11
+""",
+)
+
+entry(
+    index = 129,
+    label = "C2H2O-2 + C6H5 <=> C8H7O-4",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (285.3, 'cm^3/(mol*s)'),
+        n = 3.079,
+        Ea = (-0.295, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3""",
+    longDesc = 
+u"""
+Taken from entry: phenyl + hocch <=> ic1
+""",
+)
+
+entry(
+    index = 131,
+    label = "C8H6O-4 + H <=> C8H7O-6",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (1.164e+09, 'cm^3/(mol*s)'),
+        n = 1.529,
+        Ea = (4.393, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3""",
+    longDesc = 
+u"""
+Taken from entry: H + p1 <=> i1
+""",
+)
+
+entry(
+    index = 133,
+    label = "C8H6O-5 + H <=> C8H7O-8",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (2.878e+07, 'cm^3/(mol*s)'),
+        n = 1.697,
+        Ea = (5.96, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3""",
+    longDesc = 
+u"""
+Taken from entry: p2 + H <=> i6
+""",
+)
+
+
+
+entry(
+    index = 134,
+    label = "C6H9-11 <=> C5H6-2 + CH3",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(9.89e+14, 's^-1'), n=0, Ea=(38.9, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2015_Wang_K_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: Well_5 <=> CH3 + CPD
+""",
+)
+
+
+
+entry(
+    index = 135,
+    label = "C3H4-2 + C6H5 <=> C9H9-6",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (2.075e+06, 'cm^3/(mol*s)'),
+        n = 2.038,
+        Ea = (3.037, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: phenyl + HCCCH3 <=> W1_2
+""",
+)
+
+entry(
+    index = 136,
+    label = "C3H4-4 + C6H5 <=> C9H9-7",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (630400, 'cm^3/(mol*s)'),
+        n = 2.103,
+        Ea = (6.093, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: phenyl + HCCCH3 <=> W3_4
+""",
+)
+
+entry(
+    index = 137,
+    label = "C3H4 + C6H5 <=> C9H9-8",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (28890, 'cm^3/(mol*s)'),
+        n = 2.595,
+        Ea = (3.241, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: phenyl + H2CCCH2 <=> W6
+""",
+)
+
+entry(
+    index = 138,
+    label = "C3H4-3 + C6H5 <=> C9H9-9",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(4578, 'cm^3/(mol*s)'), n=2.53, Ea=(1.932, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: phenyl + H2CCCH2 <=> W11
+""",
+)
+
+entry(
+    index = 139,
+    label = "C2H2 + C7H7-3 <=> C9H9",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (892300, 'cm^3/(mol*s)'),
+        n = 2.091,
+        Ea = (11.371, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: benzyl + C2H2 <=> W20
+""",
+)
+
+entry(
+    index = 140,
+    label = "C9H8-6 + H <=> C9H9-10",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (2.514e+08, 'cm^3/(mol*s)'),
+        n = 1.545,
+        Ea = (3.073, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: Indene + H <=> W22
+""",
+)
+
+entry(
+    index = 141,
+    label = "C9H8-7 + H <=> C9H9-11",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (3.739e+10, 'cm^3/(mol*s)'),
+        n = 0.881,
+        Ea = (-0.465, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: Indene + H <=> W23
+""",
+)
+
+entry(
+    index = 142,
+    label = "C9H8-8 + H <=> C9H9-12",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (1.639e+10, 'cm^3/(mol*s)'),
+        n = 1.06,
+        Ea = (4.834, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: P2 + H <=> W1_2
+""",
+)
+
+entry(
+    index = 143,
+    label = "C9H8-9 + H <=> C9H9-13",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (3.492e+10, 'cm^3/(mol*s)'),
+        n = 1.051,
+        Ea = (3.163, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: P2 + H <=> W5
+""",
+)
+
+entry(
+    index = 144,
+    label = "C9H8-10 + H <=> C9H9-14",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (8.175e+08, 'cm^3/(mol*s)'),
+        n = 1.505,
+        Ea = (2.462, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: phenyl-allene + H <=> W1_2
+""",
+)
+
+entry(
+    index = 145,
+    label = "C9H8-11 + H <=> C9H9-15",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (3.339e+08, 'cm^3/(mol*s)'),
+        n = 1.587,
+        Ea = (2.425, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: phenyl-allene + H <=> W8_9
+""",
+)
+
+entry(
+    index = 146,
+    label = "C9H8-12 + H <=> C9H9-16",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (3.113e+08, 'cm^3/(mol*s)'),
+        n = 1.511,
+        Ea = (4.384, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: phenyl-allene + H <=> W11
+""",
+)
+
+entry(
+    index = 147,
+    label = "C9H8-13 + H <=> C9H9-17",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (1.255e+11, 'cm^3/(mol*s)'),
+        n = 1.005,
+        Ea = (3.143, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: P4 + H <=> W11
+""",
+)
+
+entry(
+    index = 148,
+    label = "C9H8-14 + H <=> C9H9-18",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (2.276e+10, 'cm^3/(mol*s)'),
+        n = 1.103,
+        Ea = (4.911, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: P4 + H <=> W20
+""",
+)
+
+entry(
+    index = 149,
+    label = "C8H6 + CH3 <=> C9H9-19",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (563200, 'cm^3/(mol*s)'),
+        n = 2.488,
+        Ea = (11.733, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: phenylacetylene + CH3 <=> W3_4
+""",
+)
+
+entry(
+    index = 150,
+    label = "C8H6-2 + CH3 <=> C9H9-20",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (713400, 'cm^3/(mol*s)'),
+        n = 2.58,
+        Ea = (7.568, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: phenylacetylene + CH3 <=> W5
+""",
+)
+
+
+
+entry(
+    index = 151,
+    label = "C9H8-4 + H <=> C9H9-4",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (9.954e+07, 'cm^3/(mol*s)'),
+        n = 1.548,
+        Ea = (4.985, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: Indene + H <=> W15
+""",
+)
+
+entry(
+    index = 152,
+    label = "C9H8-3 + H <=> C9H9-2",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (7.379e+07, 'cm^3/(mol*s)'),
+        n = 1.723,
+        Ea = (7.429, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: Indene + H <=> W18
+""",
+)
+
+
+
+entry(
+    index = 153,
+    label = "C10H10-12 + H <=> C10H11-18",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (2.059e+08, 'cm^3/(mol*s)'),
+        n = 1.596,
+        Ea = (4.69, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_Indene_CH3""",
+    longDesc = 
+u"""
+Taken from entry: (3)methylindene + H <=> W1
+""",
+)
+
+entry(
+    index = 154,
+    label = "C10H10-13 + H <=> C10H11-19",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (5.904e+08, 'cm^3/(mol*s)'),
+        n = 1.534,
+        Ea = (3.418, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_Indene_CH3""",
+    longDesc = 
+u"""
+Taken from entry: (1)methylindene + H <=> W1
+""",
+)
+
+entry(
+    index = 155,
+    label = "C9H8-6 + CH3 <=> C10H11-20",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (3206, 'cm^3/(mol*s)'),
+        n = 2.611,
+        Ea = (8.195, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_Indene_CH3""",
+    longDesc = 
+u"""
+Taken from entry: Indene + CH3 <=> W1
+""",
+)
+
+entry(
+    index = 156,
+    label = "C10H10-14 + H <=> C10H11-21",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (1.441e+08, 'cm^3/(mol*s)'),
+        n = 1.514,
+        Ea = (2.403, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_Indene_CH3""",
+    longDesc = 
+u"""
+Taken from entry: (2)methylindene + H <=> W2
+""",
+)
+
+entry(
+    index = 157,
+    label = "C9H8-7 + CH3 <=> C10H11-22",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (5064, 'cm^3/(mol*s)'),
+        n = 2.608,
+        Ea = (5.867, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_Indene_CH3""",
+    longDesc = 
+u"""
+Taken from entry: Indene + CH3 <=> W2
+""",
+)
+
+
+
+entry(
+    index = 158,
+    label = "C4H6 + C6H5 <=> C10H11-23",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(813000, 'cm^3/(mol*s)'), n=2.56, Ea=(0, 'kJ/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2005_Ismail_C6H5_C4H6""",
+    longDesc = 
+u"""
+Taken from entry: phenyl + (1_3)butadiene <=> (4)phenyl_buten_3_yl
+""",
+)
+
+entry(
+    index = 159,
+    label = "C4H6-2 + C6H5 <=> C10H11-24",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(47900, 'cm^3/(mol*s)'), n=2.65, Ea=(16.7, 'kJ/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2005_Ismail_C6H5_C4H6""",
+    longDesc = 
+u"""
+Taken from entry: phenyl + (1_3)butadiene <=> (3)phenyl_buten_4_yl
+""",
+)
+
+entry(
+    index = 160,
+    label = "C10H11-25 <=> C10H10-15 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(6.61e+07, 's^-1'), n=2.11, Ea=(161.62, 'kJ/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2005_Ismail_C6H5_C4H6""",
+    longDesc = 
+u"""
+Taken from entry: (4)phenyl_buten_3_yl <=> (1)phenyl_1_3_butadiene + H
+""",
+)
+
+
+
+entry(
+    index = 161,
+    label = "C10H11-17 <=> C10H10-11 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1.38e+10, 's^-1'), n=1.25, Ea=(92.6, 'kJ/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2005_Ismail_C6H5_C4H6""",
+    longDesc = 
+u"""
+Taken from entry: trihydronaphthalene <=> (1_4)dihydro_naphthalene + H
+""",
+)
+
+entry(
+    index = 162,
+    label = "C2H2 + C8H7 <=> C10H9-19",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (7.12e+07, 'cm^3/(mol*s)'),
+        n = 1.489,
+        Ea = (4.331, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: C6H4C2H3 + C2H2 <=> W5
+""",
+)
+
+entry(
+    index = 163,
+    label = "C10H9-20 <=> C10H8-15 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(2.567e+11, 's^-1'), n=0.787, Ea=(28.205, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W6 <=> P1 + H
+""",
+)
+
+entry(
+    index = 164,
+    label = "C10H9-21 <=> C10H8-16 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1.191e+09, 's^-1'), n=1.264, Ea=(30.816, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W8 <=> P2 + H
+""",
+)
+
+entry(
+    index = 165,
+    label = "C10H9-22 <=> C10H8-17 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1.304e+10, 's^-1'), n=1.16, Ea=(37.552, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W5 <=> P5 + H
+""",
+)
+
+entry(
+    index = 166,
+    label = "C10H9-23 <=> C10H8-18 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(2.05e+10, 's^-1'), n=1.329, Ea=(52.477, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W101 <=> P2 + H
+""",
+)
+
+entry(
+    index = 167,
+    label = "C10H9-24 <=> C10H8-19 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(7.923e+11, 's^-1'), n=0.777, Ea=(40.274, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W102 <=> P2 + H
+""",
+)
+
+entry(
+    index = 168,
+    label = "C10H9-25 <=> C10H8-20 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(4.568e+11, 's^-1'), n=0.972, Ea=(78.037, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W103 <=> P105 + H
+""",
+)
+
+entry(
+    index = 169,
+    label = "C10H9-26 <=> C10H8-21 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(8.249e+08, 's^-1'), n=1.2, Ea=(27.426, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W107 <=> P109 + H
+""",
+)
+
+entry(
+    index = 170,
+    label = "C10H9-27 <=> C10H8-22 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1.956e+11, 's^-1'), n=0.789, Ea=(32.262, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W118 <=> P1 + H
+""",
+)
+
+entry(
+    index = 171,
+    label = "C10H9-28 <=> C10H8-23 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(3.427e+09, 's^-1'), n=1.431, Ea=(66.532, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W106 <=> P109 + H
+""",
+)
+
+entry(
+    index = 172,
+    label = "C10H9-29 <=> C10H8-24 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1.893e+15, 's^-1'), n=-0.16, Ea=(65.494, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W108 <=> P109 + H
+""",
+)
+
+entry(
+    index = 173,
+    label = "C10H9-30 <=> C10H8-25 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1.234e+12, 's^-1'), n=0.766, Ea=(43.611, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W119 <=> P2 + H
+""",
+)
+
+
+
+entry(
+    index = 174,
+    label = "C2H2 + C8H7-2 <=> C10H9-31",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (750000, 'cm^3/(mol*s)'),
+        n = 1.979,
+        Ea = (5066, 'cal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H8_HACA2""",
+    longDesc = 
+u"""
+Taken from entry: A3a + C2H2 <=> A4b
+""",
+)
+
+
+
+entry(
+    index = 175,
+    label = "C2H2O + C6H5 <=> C8H7O-5",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (2364, 'cm^3/(mol*s)'),
+        n = 2.565,
+        Ea = (0.552, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3""",
+    longDesc = 
+u"""
+Taken from entry: phenyl + ketene <=> ic2
+""",
+)
+
+entry(
+    index = 176,
+    label = "C2H2O-3 + C6H5 <=> C8H7O-7",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (19210, 'cm^3/(mol*s)'),
+        n = 2.549,
+        Ea = (0.743, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3""",
+    longDesc = 
+u"""
+Taken from entry: phenyl + ketene <=> i20
+""",
+)
+
+entry(
+    index = 177,
+    label = "C8H6-2 + HO <=> C8H7O-9",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (7.744e+06, 'cm^3/(mol*s)'),
+        n = 1.886,
+        Ea = (-2.895, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3""",
+    longDesc = 
+u"""
+Taken from entry: OH + phenylacetylene <=> i1
+""",
+)
+
+entry(
+    index = 178,
+    label = "C8H6 + HO <=> C8H7O-10",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (111000, 'cm^3/(mol*s)'),
+        n = 2.135,
+        Ea = (-0.967, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3""",
+    longDesc = 
+u"""
+Taken from entry: OH + phenylacetylene <=> ic1
 """,
 )
 

@@ -1030,8 +1030,8 @@ entry(
     label = "FiveMember",
     group = 
 """
-1 * R!H u0 {2,[S,D]} {5,[S,D]}
-2   R!H u0 {1,[S,D]} {3,[S,D]}
+1 * R!H u0 {2,[S,D,T]} {5,[S,D]}
+2   R!H u0 {1,[S,D,T]} {3,[S,D]}
 3   R!H u0 {2,[S,D]} {4,[S,D]}
 4   R!H u0 {3,[S,D]} {5,[S,D]}
 5   R!H u0 {1,[S,D]} {4,[S,D]}
@@ -3709,6 +3709,73 @@ u"""
 """,
 )
 
+entry(
+    index = 92,
+    label = "1,2-Cyclopentadiene",
+    group =
+"""
+1 * C u0 {2,S} {5,S}
+2   Cd u0 {1,S} {3,D}
+3   Cdd u0 {2,D} {4,D}
+4   Cd u0 {3,D} {5,S}
+5   C u0 {1,S} {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([-3.610227533, -3.220365201, -2.9183174, -2.860732314, -2.503231358, -1.669783939, -1.310015296],'cal/(mol*K)'),
+        H298 = (65.85343212,'kcal/mol'),
+        S298 = (26.75230402,'cal/(mol*K)'),
+    ),
+    shortDesc = u"""Fitted to M06 calculation""",
+    longDesc =
+u"""
+
+""",
+)
+
+entry(
+    index = 93,
+    label = "Cyclopentyne",
+    group =
+"""
+1 * Ct u0 {2,T} {5,S}
+2   Ct u0 {1,T} {3,S}
+3   C u0 {2,S} {4,S}
+4   C u0 {3,S} {5,S}
+5   C u0 {1,S} {4,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300,400,500,600,800,1000,1500],'K'),
+        Cpdata = ([-1.441, -1.573, -1.731, -1.812, -1.511, -1.194, -3.151],'cal/(mol*K)'),
+        H298 = (72.047,'kcal/mol'),
+        S298 = (28.96,'cal/(mol*K)'),
+    ),
+    shortDesc = u"""Fitted to CBS-QB3 calculation""",
+    longDesc =
+u"""
+
+""",
+)
+
+entry(
+    index = 94,
+    label = "five-inringonetriple",
+    group =
+"""
+1 * R!H u0 {2,T} {5,[S,D]}
+2   R!H u0 {1,T} {3,[S,D]}
+3   R!H u0 {2,[S,D]} {4,[S,D]}
+4   R!H u0 {3,[S,D]} {5,[S,D]}
+5   R!H u0 {1,[S,D]} {4,[S,D]}
+""",
+    thermo = u'Cyclopentyne',
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Use cyclopentyne ring correction for any five-membered ring containing a triple bond.
+""",
+)
+
 tree(
 """
 L1: Ring
@@ -3760,7 +3827,10 @@ L1: Ring
         L3: Cyclopentane
         L3: Cyclopentene
         L3: Cyclopentadiene
+        L3: 1,2-Cyclopentadiene
         L3: Cyclopentatriene
+        L3: five-inringonetriple
+            L4: Cyclopentyne
         L3: Tetrahydrofuran
         L3: 2,3-Dihydrofuran
         L3: 1,3-Dioxolane

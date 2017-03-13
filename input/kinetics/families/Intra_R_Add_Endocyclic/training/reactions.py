@@ -1435,3 +1435,332 @@ Taken from entry: C9H7(22) <=> C9H7(19)
 """,
 )
 
+
+
+entry(
+    index = 63,
+    label = "C7H9-7 <=> C7H9-8",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(8.9e+10, 's^-1'), n=0.33, Ea=(6.8, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C3""",
+    longDesc = 
+u"""
+Taken from entry: prod_16 <=> prod_17
+""",
+)
+
+
+
+entry(
+    index = 64,
+    label = "C7H9-9 <=> C7H9-10",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1.21e+11, 's^-1'), n=0.34, Ea=(21.2, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C3""",
+    longDesc = 
+u"""
+Taken from entry: prod_13 <=> prod_14
+""",
+)
+
+
+
+entry(
+    index = 65,
+    label = "C10H11 <=> C10H11-2",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(8.76e+10, 's^-1'), n=0.78, Ea=(24.5, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H11""",
+    longDesc = 
+u"""
+Taken from entry: pdt10bis <=> pdt12
+""",
+)
+
+
+
+entry(
+    index = 66,
+    label = "C10H11-3 <=> C10H11-4",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1.02e+11, 's^-1'), n=0.85, Ea=(46.1, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H11""",
+    longDesc = 
+u"""
+Taken from entry: adductd <=> pdt14
+""",
+)
+
+entry(
+    index = 67,
+    label = "C10H11-5 <=> C10H11-6",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(5.47e+10, 's^-1'), n=0.79, Ea=(29, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H11""",
+    longDesc = 
+u"""
+Taken from entry: pdt17 <=> pdt18
+""",
+)
+
+entry(
+    index = 68,
+    label = "C10H11-7 <=> C10H11-8",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(7.9e+10, 's^-1'), n=0.29, Ea=(21.1, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H11""",
+    longDesc = 
+u"""
+Taken from entry: pdt20 <=> pdt21
+""",
+)
+
+entry(
+    index = 69,
+    label = "C10H11-9 <=> C10H11-10",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(9.38e+09, 's^-1'), n=1.08, Ea=(42.3, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H11""",
+    longDesc = 
+u"""
+Taken from entry: pdt39 <=> pdt33
+""",
+)
+
+
+
+entry(
+    index = 70,
+    label = "C10H11-11 <=> C10H11-12",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(5.29e+09, 's^-1'), n=1.04, Ea=(31.2, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H11""",
+    longDesc = 
+u"""
+Taken from entry: pdt15 <=> pdt16
+""",
+)
+
+entry(
+    index = 71,
+    label = "C10H11-13 <=> C10H11-14",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(9.16e+10, 's^-1'), n=0.2, Ea=(24.2, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H11""",
+    longDesc = 
+u"""
+Taken from entry: pdt33 <=> pdt29
+""",
+)
+
+
+
+entry(
+    index = 72,
+    label = "C7H9-11 <=> C7H9-12",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1.17e+10, 's^-1'), n=0.34, Ea=(31.2, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: vinylCPD_H""",
+    longDesc = 
+u"""
+Taken from entry: addC <=> product6
+""",
+)
+
+entry(
+    index = 73,
+    label = "C7H9-13 <=> C7H9-14",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1.12e+11, 's^-1'), n=0.26, Ea=(22.8, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: vinylCPD_H""",
+    longDesc = 
+u"""
+Taken from entry: product11 <=> product12
+""",
+)
+
+entry(
+    index = 74,
+    label = "C7H9-15 <=> C7H9-16",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(4.81e+10, 's^-1'), n=0.91, Ea=(32, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: vinylCPD_H""",
+    longDesc = 
+u"""
+Taken from entry: product26 <=> product11
+""",
+)
+
+
+
+entry(
+    index = 75,
+    label = "C7H9-17 <=> C7H9-18",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(2.77e+10, 's^-1'), n=0.87, Ea=(35, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: vinylCPD_H""",
+    longDesc = 
+u"""
+Taken from entry: addC <=> product16
+""",
+)
+
+entry(
+    index = 76,
+    label = "C7H9-19 <=> C7H9-20",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(2.56e+10, 's^-1'), n=1.17, Ea=(48.6, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: vinylCPD_H""",
+    longDesc = 
+u"""
+Taken from entry: product10 <=> product11
+""",
+)
+
+entry(
+    index = 77,
+    label = "C7H9-21 <=> C7H9-22",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1.95e+10, 's^-1'), n=1.05, Ea=(39.9, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: vinylCPD_H""",
+    longDesc = 
+u"""
+Taken from entry: product25 <=> product26
+""",
+)
+
+
+
+entry(
+    index = 78,
+    label = "C9H9-5 <=> C9H9-6",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(6.999e+07, 's^-1'), n=0.942, Ea=(10.168, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: W21 <=> W22
+""",
+)
+
+entry(
+    index = 79,
+    label = "C9H9-7 <=> C9H9-8",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(2.315e+10, 's^-1'), n=0.447, Ea=(22.628, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H9""",
+    longDesc = 
+u"""
+Taken from entry: W45 <=> W23
+""",
+)
+
+entry(
+    index = 80,
+    label = "C10H9-9 <=> C10H9-10",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(4.57e+10, 's^-1'), n=0.43, Ea=(1.924, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W5 <=> W6
+""",
+)
+
+entry(
+    index = 81,
+    label = "C10H9-11 <=> C10H9-12",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(3.017e+13, 's^-1'), n=0.272, Ea=(49.677, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W102 <=> W103
+""",
+)
+
+entry(
+    index = 82,
+    label = "C10H9-13 <=> C10H9-14",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(2.69e+10, 's^-1'), n=0.239, Ea=(33.778, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W103 <=> W104
+""",
+)
+
+entry(
+    index = 83,
+    label = "C10H9-15 <=> C10H9-16",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(3.279e+13, 's^-1'), n=0.395, Ea=(53.699, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W108 <=> W111
+""",
+)
+
+entry(
+    index = 84,
+    label = "C10H9-17 <=> C10H9-18",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(3.473e+12, 's^-1'), n=0.247, Ea=(55.262, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W108 <=> W115
+""",
+)
+
+entry(
+    index = 85,
+    label = "C10H9-19 <=> C10H9-20",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(6.748e+10, 's^-1'), n=0.262, Ea=(19.926, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H9_Mebel_TST""",
+    longDesc = 
+u"""
+Taken from entry: W111 <=> W112
+""",
+)
+
+
+entry(
+    index = 86,
+    label = "C10H9-9 <=> C10H9-10",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(5.135e+12, 's^-1'), n=0.056, Ea=(2127, 'cal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H8_HACA2""",
+    longDesc = 
+u"""
+Taken from entry: A8 <=> A9
+""",
+)
+

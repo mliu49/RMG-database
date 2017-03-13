@@ -19,7 +19,7 @@ recipe(actions=[
 entry(
     index = 1,
     label = "RnH",
-    group = "OR{R2Hall, R3Hall, R4Hall, R5Hall, R6Hall, R7Hall}",
+    group = "OR{R2Hall, R3Hall, R4Hall, R5Hall, R6Hall, R7Hall, R8Hall}",
     kinetics = None,
 )
 
@@ -3310,6 +3310,18 @@ entry(
 )
 
 entry(
+    index = 286,
+    label = "C_rad_out_Cd/Cb",
+    group = 
+"""
+1 *1 C   u1 {2,S} {3,S}
+2    Cd  u0 {1,S}
+3    Cb  u0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 218,
     label = "CO_H_out",
     group = 
@@ -3438,7 +3450,7 @@ entry(
 
 entry(
     index = 268,
-    label = "Cd_H_out_singleDe_CdCb",
+    label = "Cd_H_out_CdCb",
     group = 
 """
 1 *2 Cd            u0 {2,S} {3,S}
@@ -3693,6 +3705,23 @@ entry(
 )
 
 entry(
+    index = 290,
+    label = "Cs_H_out_H/Cd/C/Cb",
+    group = 
+"""
+1 *2 Cs u0 {2,S} {3,S} {4,S}
+2 *3 H  u0 {1,S}
+3    Cd u0 {1,S} {5,D} {6,S}
+4    H  u0 {1,S}
+5    C  u0 {3,D} {7,S} {8,S}
+6    R  u0 {3,S}
+7    Cb u0 {5,S}
+8    R  u0 {5,S}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 248,
     label = "Cs_H_out_noH",
     group = 
@@ -3858,7 +3887,7 @@ entry(
 entry(
     index = 260,
     label = "Cs_H_out_TwoDe",
-    group = "OR{Cs_H_out_CdCd, Cs_H_out_CdCt, Cs_H_out_CtCt}",
+    group = "OR{Cs_H_out_CdCd, Cs_H_out_CdCt, Cs_H_out_CtCt, CPD}",
     kinetics = None,
 )
 
@@ -3986,6 +4015,315 @@ entry(
 6    R      u0 {3,S}
 7    Cd      u0 {5,S}
 8    R      u0 {5,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 269,
+    label = "C_rad_out_Cd/Cd",
+    group =
+"""
+1 *1 C  u1 {2,S} {3,S}
+2    Cd u0 {1,S}
+3    Cd u0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 270,
+    label = "CPD",
+    group =
+"""
+1  *2 Cs u0 {2,S} {3,S} {4,S}
+2  *3 H  u0 {1,S}
+3     C  u0 {1,S} {5,D}
+4     C  u0 {1,S} {7,D}
+5     C  u0 {3,D} {7,S}
+7     C  u0 {4,D} {5,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 271,
+    label = "C_rad_out_H/(Cd-Cd-Cd-Cd-Cd)",
+    group =
+"""
+1 *1 C  u1 {2,S} {3,S}
+2    H  u0 {1,S}
+3    Cd u0 {1,S} {4,D}
+4    Cd u0 {5,S} {3,D}
+5    Cd u0 {4,S} {6,D}
+6    Cd u0 {7,S} {5,D}
+7    Cd u0 {6,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 272,
+    label = "R7H_SDSDSS",
+    group =
+"""
+1 *1 R!H u1 {2,S}
+2 *4 R!H u0 {1,S} {3,D}
+3 *6 R!H u0 {2,D} {4,S}
+4 *7 R!H u0 {3,S} {5,D}
+5 *8 R!H u0 {4,D} {6,S}
+6 *5 R!H u0 {5,S} {7,S}
+7 *2 R!H u0 {6,S} {8,S}
+8 *3 H   u0 {7,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 273,
+    label = "R8Hall",
+    group =
+"""
+1 *1 R!H u1 {2,[S,D,T,B]}
+2 *4 R!H ux {1,[S,D,T,B]} {3,[S,D,T,B]}
+3 *6 R!H ux {2,[S,D,T,B]} {4,[S,D,T,B]}
+4 *7 R!H ux {3,[S,D,T,B]} {5,[S,D,T,B]}
+5 *8 R!H ux {4,[S,D,T,B]} {6,[S,D,T,B]}
+6 *9 R!H ux {5,[S,D,T,B]} {7,[S,D,T,B]}
+7 *5 R!H ux {6,[S,D,T,B]} {8,[S,D,T,B]}
+8 *2 R!H u0 {7,[S,D,T,B]} {9,S}
+9 *3 H   u0 {8,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 274,
+    label = "R8H",
+    group =
+"""
+1 *1 R!H u1 {2,[S,D,T,B]}
+2 *4 R!H u0 {1,[S,D,T,B]} {3,[S,D,T,B]}
+3 *6 R!H u0 {2,[S,D,T,B]} {4,[S,D,T,B]}
+4 *7 R!H u0 {3,[S,D,T,B]} {5,[S,D,T,B]}
+5 *8 R!H u0 {4,[S,D,T,B]} {6,[S,D,T,B]}
+6 *9 R!H u0 {5,[S,D,T,B]} {7,[S,D,T,B]}
+7 *5 R!H u0 {6,[S,D,T,B]} {8,[S,D,T,B]}
+8 *2 R!H u0 {7,[S,D,T,B]} {9,S}
+9 *3 H   u0 {8,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 275,
+    label = "R8H_SDSDSD",
+    group =
+"""
+1 *1 R!H u1 {2,S}
+2 *4 R!H u0 {1,S} {3,D}
+3 *6 R!H u0 {2,D} {4,S}
+4 *7 R!H u0 {3,S} {5,D}
+5 *8 R!H u0 {4,D} {6,S}
+6 *9 R!H u0 {5,S} {7,D}
+7 *5 R!H u0 {6,D} {8,S}
+8 *2 R!H u0 {7,S} {9,S}
+9 *3 H   u0 {8,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 276,
+    label = "Cs_H_out_H/(Cd-Cd-Cd)",
+    group =
+"""
+1 *2 Cs u0 {2,S} {3,S} {4,S}
+2 *3 H  u0 {1,S}
+3    Cd u0 {1,S} {5,D}
+4    H  u0 {1,S}
+5    Cd  u0 {3,D} {6,S}
+6    Cd  u0 {5,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 277,
+    label = "Cs_H_out_H/(Cd-Cd-Cd-Cd-Cd)",
+    group =
+"""
+1 *2 Cs u0 {2,S} {3,S} {4,S}
+2 *3 H  u0 {1,S}
+3    Cd u0 {1,S} {5,D}
+4    H  u0 {1,S}
+5    Cd  u0 {3,D} {6,S}
+6    Cd  u0 {5,S} {7,D}
+7    Cd  u0 {8,S} {6,D}
+8    Cd  u0 {7,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 277,
+    label = "C_rad_out_H/(Cd-Cd-Cd)",
+    group =
+"""
+1 *1 C  u1 {2,S} {3,S}
+2    H  u0 {1,S}
+3    Cd u0 {1,S} {4,D}
+4    Cd u0 {5,S} {3,D}
+5    Cd u0 {4,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 278,
+    label = "C_rad_out_Cd/Cd_cyc5",
+    group =
+"""
+1 *1 C  u1 {2,S} {3,S}
+2    Cd u0 {1,S} {4,D}
+3    Cd u0 {1,S} {5,D}
+4    Cd u0 {5,S} {2,D}
+5    Cd u0 {4,S} {3,D}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 288,
+    label = "C_rad_out_Cd/Cd_cyc5_cyc6",
+    group =
+"""
+1 *1 C  u1 {2,S} {3,S}
+2    Cd u0 {1,S} {4,D}
+3    Cd u0 {1,S} {5,D}
+4    Cd u0 {5,S} {2,D} {9,S}
+5    Cd u0 {4,S} {3,D} {6,S}
+6    Cd u0 {5,S} {7,D}
+7    Cd u0 {6,D} {8,S}
+8    Cd u0 {7,S} {9,D}
+9    Cd u0 {8,D} {4,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 279,
+    label = "Cd_H_out_double(Cd-Cd-Cd-Cd)",
+    group =
+"""
+1 *2 Cd       u0 {2,S} {3,D}
+2 *3 H        u0 {1,S}
+3    Cd       u0 {1,D} {4,S}
+4    Cd       u0 {3,S} {5,D}
+5    Cd       u0 {6,S} {4,D}
+6    Cd       u0 {5,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 280,
+    label = "R5H_SMMS",
+    group =
+"""
+1 *1 R!H u1 {2,S}
+2 *4 R!H u0 {1,S} {3,[D,T,B]}
+3 *6 R!H u0 {2,[D,T,B]} {4,[D,T,B]}
+4 *5 R!H u0 {3,[D,T,B]} {5,S}
+5 *2 R!H u0 {4,S} {6,S}
+6 *3 H   u0 {5,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 281,
+    label = "C_rad_out_H/Cb",
+    group =
+"""
+1 *1 C             u1 {2,S} {3,S}
+2    H             u0 {1,S}
+3    Cb            u0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 282,
+    label = "Cd_rad_out_Cs",
+    group =
+"""
+1 *1 Cd       u1 {2,S}
+2    Cs       u0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 283,
+    label = "Cd_H_out_Cb",
+    group =
+"""
+1 *2 Cd            u0 {2,S} {3,S}
+2 *3 H             u0 {1,S}
+3    Cb            u0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 284,
+    label = "C_rad_out_H/Cd",
+    group =
+"""
+1 *1 C  u1 {2,S} {3,S}
+2    H  u0 {1,S}
+3    Cd u0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 285,
+    label = "Cd_rad_out_Cd",
+    group =
+"""
+1 *1 Cd       u1 {2,D}
+2    Cd       u0 {1,D}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 287,
+    label = "Cd_rad_out_Cd_sec_ring",
+    group =
+"""
+1 *1 Cd u1 {2,D}
+2    Cd u0 {1,D} {3,S} {7,S}
+3    Cd	u0 {2,S} {4,D}
+4    Cd u0 {3,D} {5,S}
+5    Cd u0 {4,S} {6,D}
+6    Cd u0 {5,D} {7,S}
+7    Cd u0 {6,S} {2,S} {8,D}
+8    Cd u0 {7,D}		
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 289,
+    label = "Cd_rad_out_Cd_Cb",
+    group =
+"""
+1 *1 Cd       u1 {2,D}
+2    Cd       u0 {1,D} {3,S}
+3    Cb	      u0 {2,S}
 """,
     kinetics = None,
 )
@@ -4127,6 +4465,7 @@ L1: RnH
             L4: R5H_SBBB
             L4: R5H_BBBS
             L4: R5H_BBBB
+            L4: R5H_SMMS
     L2: R6Hall
         L3: R6HJ_1
         L3: R6HJ_2
@@ -4183,17 +4522,25 @@ L1: RnH
         L3: R7H
             L4: R7H_OOCs4
                 L5: R7H_OOCCCC(Cs/Cs)
+            L4: R7H_SDSDSS
+    L2: R8Hall
+        L3: R8H
+            L4: R8H_SDSDSD
 L1: Y_rad_out
     L2: O_rad_out
     L2: S_rad_out
     L2: Cd_rad_out
         L3: Cd_rad_out_double
+            L4: Cd_rad_out_Cd
+		L5: Cd_rad_out_Cd_Cb
+		L5: Cd_rad_out_Cd_sec_ring
 	    L4: Cd_rad_out_double_benzene
         L3: Cd_rad_out_single
             L4: Cd_rad_out_singleH
             L4: Cd_rad_out_singleNd
+                L5: Cd_rad_out_Cs
             L4: Cd_rad_out_singleDe
-		L5: Cd_rad_out_singleDe_Cb
+		        L5: Cd_rad_out_singleDe_Cb
     L2: Ct_rad_out
     L2: Cb_rad_out
     L2: CO_rad_out
@@ -4205,6 +4552,10 @@ L1: Y_rad_out
             L4: C_rad_out_H/NonDeO
             L4: C_rad_out_H/NonDeS
             L4: C_rad_out_H/OneDe
+                L5: C_rad_out_H/(Cd-Cd-Cd-Cd-Cd)
+                L5: C_rad_out_H/(Cd-Cd-Cd)
+                L5: C_rad_out_H/Cd
+                L5: C_rad_out_H/Cb
         L3: C_rad_out_noH
             L4: C_rad_out_NonDe
                 L5: C_rad_out_Cs2
@@ -4217,6 +4568,10 @@ L1: Y_rad_out
                 L5: C_rad_out_OneDe/O
                 L5: C_rad_out_OneDe/S
             L4: C_rad_out_TwoDe
+                L5: C_rad_out_Cd/Cd
+                    L6: C_rad_out_Cd/Cd_cyc5
+			L7: C_rad_out_Cd/Cd_cyc5_cyc6
+		L5: C_rad_out_Cd/Cb
 L1: XH_out
     L2: CO_H_out
     L2: O_H_out
@@ -4225,11 +4580,13 @@ L1: XH_out
     L2: S_H_out
     L2: Cd_H_out_double
         L3: Cd_H_out_doubleC
+            L4: Cd_H_out_double(Cd-Cd-Cd-Cd)
     L2: Cd_H_out_single
         L3: Cd_H_out_singleH
         L3: Cd_H_out_singleNd
         L3: Cd_H_out_singleDe
-	    L4:Cd_H_out_singleDe_CdCb
+            L4: Cd_H_out_Cb
+	        L4: Cd_H_out_CdCb
     L2: Cs_H_out
         L3: Cs_H_out_2H
             L4: Cs_H_out_2H/NonDeC
@@ -4246,7 +4603,10 @@ L1: XH_out
                 L5: Cs_H_out_H/Ct
                 L5: Cs_H_out_H/CO
                 L5: Cs_H_out_H/CS
+                L5: Cs_H_out_H/(Cd-Cd-Cd-Cd-Cd)
+                L5: Cs_H_out_H/(Cd-Cd-Cd)
                 L5: Cs_H_out_H/Cd
+		    L6: Cs_H_out_H/Cd/C/Cb	
             L4: Cs_H_out_H/AromDe
         L3: Cs_H_out_noH
             L4: Cs_H_out_NonDe
@@ -4265,6 +4625,7 @@ L1: XH_out
                 L5: Cs_H_out_CtCt
                 L5: Cs_H_out_CdCt
                 L5: Cs_H_out_CdCd
+                L5: CPD
             L4: Cs_H_out_AromDe
         L3: Cs_H_out_OOH
             L4: Cs_H_out_OOH/Cs
@@ -5772,3 +6133,45 @@ because the TS would be far too strained. Resonance form 3.
 """,
 )
 ##########
+forbidden(
+    label = "fulvene_H_mig_ring_edge_to_tail",
+    group =
+"""
+1 *1 C u1 {2,S}
+2 C u0 {1,S} {3,D} {4,S}
+3 C u0 {2,D} {5,S}
+4 C u0 {2,S} {6,D}
+5 *2 C u0 {3,S} {6,S} {7,S}
+6 C u0 {4,D} {5,S}
+7 *3 H u0 {5,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Prevents the fulvene + H radical with radical site on the tail from abstracting an H
+from the far edge of the ring
+""",
+)
+
+##########
+#Forbid a radical double-bonded to a 6-membered ring from abstracting an H the para position
+
+forbidden(
+    label = "H_mig_from_p_position_of_cyc6_sidegroup_to_1_position_of_double_bonded_sidechain_dir_1",
+    group =
+"""
+1 *1 R!H u1 {2,D}
+2    R!H u0 {1,D} {3,[S,D,T,B]} {4,[S,D,T,B]}
+3    R!H u0 {2,[S,D,T,B]} {6,[S,D,T,B]}
+4    R!H u0 {2,[S,D,T,B]} {7,[S,D,T,B]}
+5 *2 R!H u0 {6,[S,D,T,B]} {7,[S,D,T,B]} {8,S}
+6    R!H u0 {3,[S,D,T,B]} {5,[S,D,T,B]}
+7    R!H u0 {4,[S,D,T,B]} {5,[S,D,T,B]}
+8 *3 H u0 {5,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical double-bonded to a 6-membered ring from abstracting an H the para position
+""",
+)
