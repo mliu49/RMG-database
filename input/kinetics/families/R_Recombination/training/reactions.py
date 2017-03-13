@@ -261,7 +261,7 @@ Taken from entry: ethyl + CPDyl <=> ethylCPD
 )
 
 entry(
-    index = 15,
+    index = 11,
     label = "CH3NO2 <=> CH3 + NO2",
     kinetics = Arrhenius(A=(1.8e+16, 's^-1'), n=0, Ea=(58500, 'cal/mol'), T0=(1, 'K')),
     rank = 1,
@@ -294,13 +294,13 @@ The high-pressure limit kinetics was taken. Troe coefficients are:
 )
 
 entry(
-    index = 20,
+    index = 12,
     label = "CH3 + CH3 <=> C2H6",
     degeneracy = 1,
     kinetics = Arrhenius(A=(9.45e+14, 'cm^3/(mol*s)'), n=-0.538, Ea=(135.1, 'cal/mol'), T0=(1, 'K'), Tmin=(200, 'K'), Tmax=(2000, 'K')),
     rank = 2,
     shortDesc = u"""CASPT2/cc-pvdz""",
-    longDesc = 
+    longDesc =
 u"""
 S.J. Klippenstein, Y. Georgievskiia, L.B. Hardingb
 Predictive theory for the combination kinetics of two alkyl radicals
@@ -310,13 +310,13 @@ doi: 10.1039/B515914H
 )
 
 entry(
-    index = 21,
+    index = 13,
     label = "CH3 + C2H5 <=> C3H8",
     degeneracy = 1,
     kinetics = Arrhenius(A=(1.23e+15, 'cm^3/(mol*s)'), n=-0.562, Ea=(20.5, 'cal/mol'), T0=(1, 'K'), Tmin=(200, 'K'), Tmax=(2000, 'K')),
     rank = 2,
     shortDesc = u"""CASPT2/cc-pvdz""",
-    longDesc = 
+    longDesc =
 u"""
 S.J. Klippenstein, Y. Georgievskiia, L.B. Hardingb
 Predictive theory for the combination kinetics of two alkyl radicals
@@ -326,13 +326,13 @@ doi: 10.1039/B515914H
 )
 
 entry(
-    index = 22,
+    index = 14,
     label = "C2H5 + C2H5 <=> C4H10",
     degeneracy = 1,
     kinetics = Arrhenius(A=(8.73e+14, 'cm^3/(mol*s)'), n=-0.699, Ea=(-3.2, 'cal/mol'), T0=(1, 'K'), Tmin=(200, 'K'), Tmax=(2000, 'K')),
     rank = 2,
     shortDesc = u"""CASPT2/cc-pvdz""",
-    longDesc = 
+    longDesc =
 u"""
 S.J. Klippenstein, Y. Georgievskiia, L.B. Hardingb
 Predictive theory for the combination kinetics of two alkyl radicals
@@ -341,3 +341,180 @@ doi: 10.1039/B515914H
 """,
 )
 
+entry(
+    index = 15,
+    label = "C5H5 + CH3 <=> C6H8",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (1.38482e-08, 'cm^3/(molecule*s)'),
+        n = -0.7,
+        Ea = (-0.5, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: c-C5H5_CH3_Sharma_TST""",
+    longDesc = 
+u"""
+Taken from entry: c-C5H5 + CH3 <=> C5H5CH3-5
+""",
+)
+
+entry(
+    index = 16,
+    label = "C6H7 + H <=> C6H8-2",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (7.582e-10, 'cm^3/(molecule*s)'),
+        n = -0.1,
+        Ea = (0.4, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: c-C5H5_CH3_Sharma_TST""",
+    longDesc = 
+u"""
+Taken from entry: R2 + H <=> C5H5CH3-5
+""",
+)
+
+entry(
+    index = 17,
+    label = "C6H7-2 + H <=> C6H8-3",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (6.7982e-11, 'cm^3/(molecule*s)'),
+        n = 0.3,
+        Ea = (0.1, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: c-C5H5_CH3_Sharma_TST""",
+    longDesc = 
+u"""
+Taken from entry: R2 + H <=> C5H5CH3-1
+""",
+)
+
+entry(
+    index = 18,
+    label = "C6H7-3 + H <=> C6H8-4",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (1.74338e-12, 'cm^3/(molecule*s)'),
+        n = 0.6,
+        Ea = (-0.2, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: c-C5H5_CH3_Sharma_TST""",
+    longDesc = 
+u"""
+Taken from entry: R1 + H <=> C5H5CH3-1
+""",
+)
+
+entry(
+    index = 19,
+    label = "C6H7-4 + H <=> C6H8-5",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (1.50356e-10, 'cm^3/(molecule*s)'),
+        n = 0.1,
+        Ea = (0, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: c-C5H5_CH3_Sharma_TST""",
+    longDesc = 
+u"""
+Taken from entry: R2 + H <=> C5H5CH3-2
+""",
+)
+
+entry(
+    index = 20,
+    label = "C6H7-5 + H <=> C6H8-6",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (5.6921e-12, 'cm^3/(molecule*s)'),
+        n = 0.5,
+        Ea = (-0.1, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: c-C5H5_CH3_Sharma_TST""",
+    longDesc = 
+u"""
+Taken from entry: R3 + H <=> C5H5CH3-2
+""",
+)
+
+entry(
+    index = 21,
+    label = "C6H7-6 + H <=> C6H8-7",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (3.48677e-12, 'cm^3/(molecule*s)'),
+        n = 0.6,
+        Ea = (-0.8, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: c-C5H5_CH3_Sharma_TST""",
+    longDesc = 
+u"""
+Taken from entry: R4 + H <=> C5H5CH3-5
+""",
+)
+
+entry(
+    index = 22,
+    label = "C10H7 + H <=> C10H8",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(4.87e+13, 'cm^3/(mol*s)'), n=0.13, Ea=(0, 'cal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C6H4C2H_C2H2_highP""",
+    longDesc = 
+u"""
+Taken from entry: C10H7-1 + H <=> C10H8
+""",
+)
+
+entry(
+    index = 23,
+    label = "C6H5 + C3H3 <=> C9H8",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1e+13, 'cm^3/(mol*s)'), n=0, Ea=(0, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: kislovB""",
+    longDesc = 
+u"""
+Taken from entry: phenyl(16) + C3H3(9) <=> C9H8(20)
+""",
+)
+
+entry(
+    index = 24,
+    label = "C9H7 + H <=> C9H8-2",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1e+13, 'cm^3/(mol*s)'), n=0, Ea=(0, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: kislovB""",
+    longDesc = 
+u"""
+Taken from entry: C9H7(19) + H(15) <=> indene(25)
+""",
+)
+
+entry(
+    index = 25,
+    label = "C6H5 + C3H3-2 <=> C9H8-3",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1e+13, 'cm^3/(mol*s)'), n=0, Ea=(0, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: kislovB""",
+    longDesc = 
+u"""
+Taken from entry: phenyl(16) + C3H3(9) <=> C9H8(21)
+""",
+)

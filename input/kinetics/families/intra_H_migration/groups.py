@@ -2946,6 +2946,29 @@ entry(
 )
 
 entry(
+    index = 269,
+    label = "Cd_rad_out_double_benzene",
+    group = 
+"""
+1 *1 Cd       u1 {2,D}
+2    [Cd,Cdd] u0 {1,D} {3,S}
+3    Cb       u0 {2,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 270,
+    label = "Cd_rad_out_double",
+    group = 
+"""
+1 *1 Cd       u1 {2,D}
+2    [Cd,Cdd] u0 {1,D}
+""",
+    kinetics = None,
+)
+
+entry(
     index = 191,
     label = "Cd_rad_out_single",
     group = 
@@ -2988,6 +3011,18 @@ entry(
 """,
     kinetics = None,
 )
+
+entry(
+    index = 268,
+    label = "Cd_rad_out_singleDe_Cb",
+    group = 
+"""
+1 *1 Cd            u1 {2,S}
+2    Cb u0 {1,S}
+""",
+    kinetics = None,
+)
+
 
 entry(
     index = 195,
@@ -3384,6 +3419,20 @@ entry(
 1 *2 Cd            u0 {2,S} {3,S}
 2 *3 H             u0 {1,S}
 3    [Cd,Ct,Cb,CO] u0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 271,
+    label = "Cd_H_out_singleDe_CdCb",
+    group = 
+"""
+1 *2 Cd            u0 {2,S} {3,S}
+2 *3 H             u0 {1,S}
+3    Cd            u0 {1,S} {4,D}
+4    Cd            u0 {3,D} {5,S}
+5    Cb            u0 {4,S}
 """,
     kinetics = None,
 )
@@ -3870,6 +3919,49 @@ entry(
     kinetics = None,
 )
 
+entry(
+    index = 266,
+    label = "Cs_H_out_AromDe",
+    group =
+"""
+1 *2 Cs  u0 {2,S} {3,S} {4,S}
+2 *3 H   u0 {1,S}
+3    R!H u0 {1,S}
+4    Cb  u0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 267,
+    label = "Cs_H_out_H/AromDe",
+    group =
+"""
+1 *2 Cs  u0 {2,S} {3,S} {4,S}
+2 *3 H   u0 {1,S}
+3    Cb  u0 {1,S}
+4    H   u0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 268,
+    label = "Cs_H_out_(CdCdCd)",
+    group = 
+"""
+1 *2 Cs     u0 {2,S} {3,S} {4,S}
+2 *3 H      u0 {1,S}
+3    Cd     u0 {1,S} {5,D} {6,S}
+4    [Cs,O] u0 {1,S}
+5    Cd      u0 {3,D} {7,S} {8,S}
+6    R      u0 {3,S}
+7    Cd      u0 {5,S}
+8    R      u0 {5,S}
+""",
+    kinetics = None,
+)
+
 tree(
 """
 L1: RnH
@@ -4066,10 +4158,13 @@ L1: Y_rad_out
     L2: O_rad_out
     L2: S_rad_out
     L2: Cd_rad_out
+        L3: Cd_rad_out_double
+            L4: Cd_rad_out_double_benzene
         L3: Cd_rad_out_single
             L4: Cd_rad_out_singleH
             L4: Cd_rad_out_singleNd
             L4: Cd_rad_out_singleDe
+                L5: Cd_rad_out_singleDe_Cb
     L2: Ct_rad_out
     L2: Cb_rad_out
     L2: CO_rad_out
@@ -4105,8 +4200,9 @@ L1: XH_out
         L3: Cd_H_out_singleH
         L3: Cd_H_out_singleNd
         L3: Cd_H_out_singleDe
+            L4: Cd_H_out_singleDe_CdCb
     L2: Cs_H_out
-        L3: Cs_H_out_OOH    
+        L3: Cs_H_out_OOH
             L4: Cs_H_out_OOH/Cs
             L4: Cs_H_out_OOH/H
         L3: Cs_H_out_noH
@@ -4121,16 +4217,19 @@ L1: XH_out
                 L5: Cs_H_out_CO
                 L5: Cs_H_out_CS
                 L5: Cs_H_out_Cd
+                    L6: Cs_H_out_(CdCdCd)
             L4: Cs_H_out_TwoDe
                 L5: Cs_H_out_CtCt
                 L5: Cs_H_out_CdCt
                 L5: Cs_H_out_CdCd
+            L4: Cs_H_out_AromDe
         L3: Cs_H_out_1H
             L4: Cs_H_out_H/NonDeC
                 L5: Cs_H_out_H/(NonDeC/Cs)
                     L6: Cs_H_out_H/(NonDeC/Cs/Cs)
                         L7: Cs_H_out_H/(NonDeC/Cs/Cs/Cs)
                 L5: Cs_H_out_H/(NonDeC/O)
+            L4: Cs_H_out_H/AromDe
             L4: Cs_H_out_H/NonDeO
             L4: Cs_H_out_H/NonDeS
             L4: Cs_H_out_H/OneDe
@@ -5238,3 +5337,408 @@ u"""
 """,
 )
 
+##########
+#Forbid a radical 2 atoms away from a phenyl side group from abstracting an H from either the meta or para position
+forbidden(
+    label = "H_mig_from_p_position_of_phenyl_sidegroup_to_2_position_of_sidechain_res1",
+    group =
+"""
+1    R!H u0 {2,[S,D,T]} {3,[S,D,T]}
+2    Cb u0 {1,[S,D,T]} {4,B} {5,B}
+3 *1 R!H u1 {1,[S,D,T]}
+4    Cb u0 {2,B} {7,B}
+5    Cb u0 {2,B} {8,B}
+6 *2 Cb u0 {7,B} {8,B} {9,S}
+7    Cb u0 {4,B} {6,B}
+8    Cb u0 {5,B} {6,B}
+9 *3 H u0 {6,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 2 atoms away from a phenyl side group from abstracting an H from the para-position
+because the TS would be far too strained. Resonance form 1.
+""",
+)
+
+forbidden(
+    label = "H_mig_from_p_position_of_phenyl_sidegroup_to_2_position_of_sidechain_res2",
+    group =
+"""
+1    R!H u0 {2,[S,D,T]} {3,[S,D,T]}
+2    C   u0 {1,[S,D,T]} {4,D} {5,S}
+3 *1 R!H u1 {1,[S,D,T]}
+4    C   u0 {2,D} {7,S}
+5    C   u0 {2,S} {8,D}
+6 *2 C   u0 {7,D} {8,S} {9,S}
+7    C   u0 {4,S} {6,D}
+8    C   u0 {5,D} {6,S}
+9 *3 H u0 {6,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 2 atoms away from a phenyl side group from abstracting an H from the para-position
+because the TS would be far too strained. Resonance form 2.
+""",
+)
+
+forbidden(
+    label = "H_mig_from_p_position_of_phenyl_sidegroup_to_2_position_of_sidechain_res3",
+    group =
+"""
+1    R!H u0 {2,[S,D,T]} {3,[S,D,T]}
+2    C   u0 {1,[S,D,T]} {4,S} {5,D}
+3 *1 R!H u1 {1,[S,D,T]}
+4    C   u0 {2,S} {7,D}
+5    C   u0 {2,D} {8,S}
+6 *2 C   u0 {7,S} {8,D} {9,S}
+7    C   u0 {4,D} {6,S}
+8    C   u0 {5,S} {6,D}
+9 *3 H u0 {6,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 2 atoms away from a phenyl side group from abstracting an H from the para-position
+because the TS would be far too strained. Resonance form 3.
+""",
+)
+
+forbidden(
+    label = "H_mig_from_m_position_of_phenyl_sidegroup_to_2_position_of_sidechain_res1",
+    group =
+"""
+1    R!H u0 {2,[S,D,T]} {3,[S,D,T]}
+2    Cb u0 {1,[S,D,T]} {4,B} {5,B}
+3 *1 R!H u1 {1,[S,D,T]}
+4    Cb u0 {2,B} {7,B}
+5    Cb u0 {2,B} {8,B}
+6    Cb u0 {7,B} {8,B}
+7 *2 Cb u0 {4,B} {6,B} {9,S}
+8    Cb u0 {5,B} {6,B}
+9 *3 H u0 {7,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 2 atoms away from a phenyl side group from abstracting an H from the meta-position
+because the TS would be far too strained. Resonance form 1.
+""",
+)
+
+forbidden(
+    label = "H_mig_from_m_position_of_phenyl_sidegroup_to_2_position_of_sidechain_res2",
+    group =
+"""
+1    R!H u0 {2,[S,D,T]} {3,[S,D,T]}
+2    C   u0 {1,[S,D,T]} {4,D} {5,S}
+3 *1 R!H u1 {1,[S,D,T]}
+4    C   u0 {2,D} {7,S}
+5    C   u0 {2,S} {8,D}
+6    C   u0 {7,D} {8,S}
+7 *2 C   u0 {4,S} {6,D} {9,S}
+8    C   u0 {5,D} {6,S}
+9 *3 H u0 {7,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 2 atoms away from a phenyl side group from abstracting an H from the meta-position
+because the TS would be far too strained. Resonance form 2.
+""",
+)
+
+forbidden(
+    label = "H_mig_from_m_position_of_phenyl_sidegroup_to_2_position_of_sidechain_res3",
+    group =
+"""
+1    R!H u0 {2,[S,D,T]} {3,[S,D,T]}
+2    C   u0 {1,[S,D,T]} {4,S} {5,D}
+3 *1 R!H u1 {1,[S,D,T]}
+4    C   u0 {2,S} {7,D}
+5    C   u0 {2,D} {8,S}
+6    C   u0 {7,S} {8,D}
+7 *2 C   u0 {4,D} {6,S} {9,S}
+8    C   u0 {5,S} {6,D}
+9 *3 H u0 {7,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 2 atoms away from a phenyl side group from abstracting an H from the meta-position
+because the TS would be far too strained. Resonance form 3.
+""",
+)
+
+##########
+
+##########
+#Forbid a radical 1 atom away from a phenyl side group from abstracting an H from either the meta or para position
+forbidden(
+    label = "H_mig_from_p_position_of_phenyl_sidegroup_to_1_position_of_sidechain_res1",
+    group =
+"""
+1 *1 R!H u1 {2,[S,D,T]}
+2    Cb u0 {1,[S,D,T]} {3,B} {4,B}
+3    Cb u0 {2,B} {6,B}
+4    Cb u0 {2,B} {7,B}
+5 *2 Cb u0 {6,B} {7,B} {8,S}
+6    Cb u0 {3,B} {5,B}
+7    Cb u0 {4,B} {5,B}
+8 *3 H u0 {5,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 1 atoms away from a phenyl side group from abstracting an H from the para-position
+because the TS would be far too strained. Resonance form 1.
+""",
+)
+
+forbidden(
+    label = "H_mig_from_p_position_of_phenyl_sidegroup_to_1_position_of_sidechain_res2",
+    group =
+"""
+1 *1 R!H u1 {2,[S,D,T]}
+2    C u0 {1,[S,D,T]} {3,D} {4,S}
+3    C u0 {2,D} {6,S}
+4    C u0 {2,S} {7,D}
+5 *2 C u0 {6,D} {7,S} {8,S}
+6    C u0 {3,S} {5,D}
+7    C u0 {4,D} {5,S}
+8 *3 H u0 {5,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 1 atoms away from a phenyl side group from abstracting an H from the para-position
+because the TS would be far too strained. Resonance form 2.
+""",
+)
+
+forbidden(
+    label = "H_mig_from_p_position_of_phenyl_sidegroup_to_1_position_of_sidechain_res3",
+    group =
+"""
+1 *1 R!H u1 {2,[S,D,T]}
+2    C u0 {1,[S,D,T]} {3,S} {4,D}
+3    C u0 {2,S} {6,D}
+4    C u0 {2,D} {7,S}
+5 *2 C u0 {6,S} {7,D} {8,S}
+6    C u0 {3,D} {5,S}
+7    C u0 {4,S} {5,D}
+8 *3 H u0 {5,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 1 atoms away from a phenyl side group from abstracting an H from the para-position
+because the TS would be far too strained. Resonance form 3.
+""",
+)
+
+forbidden(
+    label = "H_mig_from_m_position_of_phenyl_sidegroup_to_1_position_of_sidechain_res1",
+    group =
+"""
+1 *1 R!H u1 {2,[S,D,T]}
+2    Cb u0 {1,[S,D,T]} {3,B} {4,B}
+3    Cb u0 {2,B} {6,B}
+4    Cb u0 {2,B} {7,B}
+5    Cb u0 {6,B} {7,B}
+6    Cb u0 {3,B} {5,B}
+7 *2 Cb u0 {4,B} {5,B} {8,S}
+8 *3 H u0 {7,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 1 atoms away from a phenyl side group from abstracting an H from the meta-position
+because the TS would be far too strained. Resonance form 1.
+""",
+)
+
+forbidden(
+    label = "H_mig_from_m_position_of_phenyl_sidegroup_to_1_position_of_sidechain_res2",
+    group =
+"""
+1 *1 R!H u1 {2,[S,D,T]}
+2    C u0 {1,[S,D,T]} {3,D} {4,S}
+3    C u0 {2,D} {6,S}
+4    C u0 {2,S} {7,D}
+5    C u0 {6,D} {7,S}
+6    C u0 {3,S} {5,D}
+7 *2 C u0 {4,D} {5,S} {8,S}
+8 *3 H u0 {7,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 1 atoms away from a phenyl side group from abstracting an H from the meta-position
+because the TS would be far too strained. Resonance form 2.
+""",
+)
+
+forbidden(
+    label = "H_mig_from_m_position_of_phenyl_sidegroup_to_1_position_of_sidechain_res3",
+    group =
+"""
+1 *1 R!H u1 {2,[S,D,T]}
+2    C u0 {1,[S,D,T]} {3,S} {4,D}
+3    C u0 {2,S} {6,D}
+4    C u0 {2,D} {7,S}
+5    C u0 {6,S} {7,D}
+6    C u0 {3,D} {5,S}
+7 *2 C u0 {4,S} {5,D} {8,S}
+8 *3 H u0 {7,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 1 atoms away from a phenyl side group from abstracting an H from the meta-position
+because the TS would be far too strained. Resonance form 3.
+""",
+)
+#########
+
+##########
+#Forbid a radical 3 atoms away from a phenyl side group from abstracting an H from either the meta or para position
+forbidden(
+    label = "H_mig_from_p_position_of_phenyl_sidegroup_to_3_position_of_sidechain_res1",
+    group =
+"""
+1     R!H u0 {2,[S,D,T]} {3,[S,D,T]}
+2     Cb u0 {1,[S,D,T]} {4,B} {5,B}
+3     R!H u0 {1,[S,D,T]}, {10,[S,D,T]}
+4     Cb u0 {2,B} {7,B}
+5     Cb u0 {2,B} {8,B}
+6  *2 Cb u0 {7,B} {8,B} {9,S}
+7     Cb u0 {4,B} {6,B}
+8     Cb u0 {5,B} {6,B}
+9  *3 H u0 {6,S}
+10 *1 R!H u1 {3,[S,D,T]}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 2 atoms away from a phenyl side group from abstracting an H from the para-position
+because the TS would be far too strained. Resonance form 1.
+""",
+)
+
+forbidden(
+    label = "H_mig_from_p_position_of_phenyl_sidegroup_to_3_position_of_sidechain_res2",
+    group =
+"""
+1     R!H u0 {2,[S,D,T]} {3,[S,D,T]}
+2     C u0 {1,[S,D,T]} {4,S} {5,D}
+3     R!H u0 {1,[S,D,T]}, {10,[S,D,T]}
+4     C u0 {2,S} {7,D}
+5     C u0 {2,D} {8,S}
+6  *2 C u0 {7,S} {8,D} {9,S}
+7     C u0 {4,D} {6,S}
+8     C u0 {5,S} {6,D}
+9  *3 H u0 {6,S}
+10 *1 R!H u1 {3,[S,D,T]}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 2 atoms away from a phenyl side group from abstracting an H from the para-position
+because the TS would be far too strained. Resonance form 2.
+""",
+)
+
+forbidden(
+    label = "H_mig_from_p_position_of_phenyl_sidegroup_to_3_position_of_sidechain_res3",
+    group =
+"""
+1     R!H u0 {2,[S,D,T]} {3,[S,D,T]}
+2     C u0 {1,[S,D,T]} {4,D} {5,S}
+3     R!H u0 {1,[S,D,T]}, {10,[S,D,T]}
+4     C u0 {2,D} {7,S}
+5     C u0 {2,S} {8,D}
+6  *2 C u0 {7,D} {8,S} {9,S}
+7     C u0 {4,S} {6,D}
+8     C u0 {5,D} {6,S}
+9  *3 H u0 {6,S}
+10 *1 R!H u1 {3,[S,D,T]}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 2 atoms away from a phenyl side group from abstracting an H from the para-position
+because the TS would be far too strained. Resonance form 3.
+""",
+)
+
+forbidden(
+    label = "H_mig_from_m_position_of_phenyl_sidegroup_to_3_position_of_sidechain_res1",
+    group =
+"""
+1     R!H u0 {2,[S,D,T]} {3,[S,D,T]}
+2     Cb u0 {1,[S,D,T]} {4,B} {5,B}
+3     R!H u0 {1,[S,D,T]}, {10,[S,D,T]}
+4     Cb u0 {2,B} {7,B}
+5     Cb u0 {2,B} {8,B}
+6     Cb u0 {7,B} {8,B}
+7  *2 Cb u0 {4,B} {6,B} {9,S}
+8     Cb u0 {5,B} {6,B}
+9  *3 H u0 {7,S}
+10 *1 R!H u1 {3,[S,D,T]}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 2 atoms away from a phenyl side group from abstracting an H from the meta-position
+because the TS would be far too strained. Resonance form 1.
+""",
+)
+
+forbidden(
+    label = "H_mig_from_m_position_of_phenyl_sidegroup_to_3_position_of_sidechain_res2",
+    group =
+"""
+1     R!H u0 {2,[S,D,T]} {3,[S,D,T]}
+2     C u0 {1,[S,D,T]} {4,S} {5,D}
+3     R!H u0 {1,[S,D,T]}, {10,[S,D,T]}
+4     C u0 {2,S} {7,D}
+5     C u0 {2,D} {8,S}
+6     C u0 {7,S} {8,D}
+7  *2 C u0 {4,D} {6,S} {9,S}
+8     C u0 {5,S} {6,D}
+9  *3 H u0 {7,S}
+10 *1 R!H u1 {3,[S,D,T]}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 2 atoms away from a phenyl side group from abstracting an H from the meta-position
+because the TS would be far too strained. Resonance form 2.
+""",
+)
+
+forbidden(
+    label = "H_mig_from_m_position_of_phenyl_sidegroup_to_3_position_of_sidechain_res3",
+    group =
+"""
+1     R!H u0 {2,[S,D,T]} {3,[S,D,T]}
+2     C u0 {1,[S,D,T]} {4,D} {5,S}
+3     R!H u0 {1,[S,D,T]}, {10,[S,D,T]}
+4     C u0 {2,D} {7,S}
+5     C u0 {2,S} {8,D}
+6     C u0 {7,D} {8,S}
+7  *2 C u0 {4,S} {6,D} {9,S}
+8     C u0 {5,D} {6,S}
+9  *3 H u0 {7,S}
+10 *1 R!H u1 {3,[S,D,T]}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Forbid a radical 2 atoms away from a phenyl side group from abstracting an H from the meta-position
+because the TS would be far too strained. Resonance form 3.
+""",
+)
+##########
