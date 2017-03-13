@@ -1295,3 +1295,143 @@ coefficient computed TST with Eckart Tunnelling"
 """,
 )
 
+
+
+entry(
+    index = 53,
+    label = "C6H9-7 <=> C6H9-8",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(5.041e+08, 's^-1'), n=0.7, Ea=(20.246, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2015_Buras_Vinyl_1_3_Butadiene""",
+    longDesc = 
+u"""
+Taken from entry: C6H9 <=> c6-C6H9
+""",
+)
+
+
+
+entry(
+    index = 54,
+    label = "C10H9 <=> C10H9-2",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(6.09e+08, 's^-1'), n=0.695, Ea=(6.499, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C6H5_C4H4_all_TST_rates""",
+    longDesc = 
+u"""
+Taken from entry: W4 <=> W5
+""",
+)
+
+entry(
+    index = 55,
+    label = "C10H9-3 <=> C10H9-4",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(2.983e+12, 's^-1'), n=-0.321, Ea=(5.655, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C6H5_C4H4_all_TST_rates""",
+    longDesc = 
+u"""
+Taken from entry: W7 <=> W6
+""",
+)
+
+entry(
+    index = 56,
+    label = "C10H9-5 <=> C10H9-6",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(4.323e+10, 's^-1'), n=0.901, Ea=(33.428, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C6H5_C4H4_all_TST_rates""",
+    longDesc = 
+u"""
+Taken from entry: W17 <=> W7
+""",
+)
+
+entry(
+    index = 57,
+    label = "C10H9-7 <=> C10H9-8",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1.899e+10, 's^-1'), n=0.97, Ea=(33.321, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C6H5_C4H4_all_TST_rates""",
+    longDesc = 
+u"""
+Taken from entry: W11 <=> W10
+""",
+)
+
+
+
+entry(
+    index = 58,
+    label = "C10H7 <=> C10H7-2",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(9.948e+11, 's^-1'), n=0.045, Ea=(5395, 'cal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C6H4C2H_C2H2_highP""",
+    longDesc = 
+u"""
+Taken from entry: A12 <=> C10H7-1
+""",
+)
+
+
+
+entry(
+    index = 59,
+    label = "C9H9 <=> C9H9-2",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(6.485e+11, 's^-1'), n=0.065, Ea=(27.941, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: kislovB""",
+    longDesc = 
+u"""
+Taken from entry: C9H9(2) <=> C9H9(3)
+""",
+)
+
+entry(
+    index = 60,
+    label = "C9H9-3 <=> C9H9-4",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(5.565e+11, 's^-1'), n=0.009, Ea=(28.521, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: kislovB""",
+    longDesc = 
+u"""
+Taken from entry: C9H9(6) <=> C9H9(3)
+""",
+)
+
+entry(
+    index = 61,
+    label = "C9H7 <=> C9H7-2",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1.534e+11, 's^-1'), n=0.102, Ea=(13.049, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: kislovB""",
+    longDesc = 
+u"""
+Taken from entry: C9H7(18) <=> C9H7(19)
+""",
+)
+
+
+
+entry(
+    index = 62,
+    label = "C9H7-3 <=> C9H7-4",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(4.431e+11, 's^-1'), n=0.114, Ea=(15.579, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: kislovB""",
+    longDesc = 
+u"""
+Taken from entry: C9H7(22) <=> C9H7(19)
+""",
+)
+
