@@ -57,6 +57,39 @@ Derived from fitting to a complex mechanism for C2H3 + O2 = C2H2 + HO2
 """,
 )
 
+entry(
+    index = 3,
+    label = "H + C10H9 <=> H2 + C10H8",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (2.11e+09, 'cm^3/(mol*s)'),
+        n = 1.081,
+        Ea = (2011, 'cal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H8_HACA""",
+    longDesc = 
+u"""
+Taken from entry: A5 + H <=> N1 + H2
+""",
+)
 
-
+entry(
+    index = 4,
+    label = "H + C10H9-2 <=> H2 + C10H8-2",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (2.05e+08, 'cm^3/(mol*s)'),
+        n = 1.245,
+        Ea = (3405, 'cal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C10H8_HACA""",
+    longDesc = 
+u"""
+Taken from entry: A9 + H <=> N1 + H2
+""",
+)
 
