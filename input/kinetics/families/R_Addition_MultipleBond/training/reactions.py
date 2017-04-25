@@ -1221,37 +1221,6 @@ Ethylamine paper
 )
 
 entry(
-    index = 76,
-    label = "propene_1 + C6H5 <=> C9H11-6",
-    degeneracy = 1,
-    kinetics = Arrhenius(A=(214.5, 'cm^3/(mol*s)'), n=3.05, Ea=(0.83, 'kcal/mol'), T0=(1, 'K')),
-    rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: 2012_Kislov_Phenyl_Propene_w_new_pathway""",
-    longDesc =
-u"""
-Taken from entry: C6H5 + C3H6 <=> i1
-""",
-)
-
-entry(
-    index = 77,
-    label = "propene_2 + C6H5 <=> C9H11-7",
-    degeneracy = 1,
-    kinetics = Arrhenius(
-        A = (32.79, 'cm^3/(mol*s)'),
-        n = 3.085,
-        Ea = (1.881, 'kcal/mol'),
-        T0 = (1, 'K'),
-    ),
-    rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: 2012_Kislov_Phenyl_Propene_w_new_pathway""",
-    longDesc =
-u"""
-Taken from entry: C6H5 + C3H6 <=> i2
-""",
-)
-
-entry(
     index = 78,
     label = "C9H11-8 <=> C9H10-5 + H",
     degeneracy = 1,
@@ -2766,17 +2735,97 @@ Taken from entry: A3a + C2H2 <=> A4b
 )
 
 entry(
-    index = 176,
-    label = "C2H2O + C6H5 <=> C8H7O-5",
+    index = 179,
+    label = "C10H10-16 <=> C10H9-32 + H",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(5.401e+11, 's^-1'), n=0.549, Ea=(19.678, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: C3H3_C7H7_Matsugi""",
+    longDesc =
+u"""
+Taken from entry: W14 <=> P9 + H
+""",
+)
+
+entry(
+    index = 180,
+    label = "propene_1 + C6H5 <=> C9H11-6",
     degeneracy = 1,
     kinetics = Arrhenius(
-        A = (2364, 'cm^3/(mol*s)'),
-        n = 2.565,
-        Ea = (0.552, 'kcal/mol'),
+        A = (17000, 'cm^3/(mol*s)'),
+        n = 2.47,
+        Ea = (0.735, 'kcal/mol'),
         T0 = (1, 'K'),
     ),
     rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3""",
+    shortDesc = u"""Training reaction from kinetics library: 2006_Park_Phenyl_Propene""",
+    longDesc =
+u"""
+Taken from entry: C6H5 + C3H6 <=> i1
+""",
+)
+
+entry(
+    index = 181,
+    label = "propene_2 + C6H5 <=> C9H11-7",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1600, 'cm^3/(mol*s)'), n=2.64, Ea=(1.683, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2006_Park_Phenyl_Propene""",
+    longDesc =
+u"""
+Taken from entry: C6H5 + C3H6 <=> i2
+""",
+)
+
+# entry(
+#     index = 182,
+#     label = "C8H6-2 + HO <=> C8H7O-9",
+#     degeneracy = 1,
+#     kinetics = Arrhenius(
+#         A = (7.642e+12, 'cm^3/(mol*s)'),
+#         n = 0.497,
+#         Ea = (0.666, 'kcal/mol'),
+#         T0 = (1, 'K'),
+#     ),
+#     rank = 3,
+#     shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3_MESMER""",
+#     longDesc =
+# u"""
+# Taken from entry: OH + phenylacetylene <=> i1
+# """,
+# )
+#
+# entry(
+#     index = 183,
+#     label = "C8H6 + HO <=> C8H7O-10",
+#     degeneracy = 1,
+#     kinetics = Arrhenius(
+#         A = (8.773e+11, 'cm^3/(mol*s)'),
+#         n = 0.581,
+#         Ea = (2.274, 'kcal/mol'),
+#         T0 = (1, 'K'),
+#     ),
+#     rank = 3,
+#     shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3_MESMER""",
+#     longDesc =
+# u"""
+# Taken from entry: OH + phenylacetylene <=> ic1
+# """,
+# )
+
+entry(
+    index = 184,
+    label = "C2H2O + C6H5 <=> C8H7O-5",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (1.661e+08, 'cm^3/(mol*s)'),
+        n = 1.388,
+        Ea = (4.754, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3_MESMER""",
     longDesc = 
 u"""
 Taken from entry: phenyl + ketene <=> ic2
@@ -2784,69 +2833,148 @@ Taken from entry: phenyl + ketene <=> ic2
 )
 
 entry(
-    index = 177,
+    index = 185,
     label = "C2H2O-3 + C6H5 <=> C8H7O-7",
     degeneracy = 1,
     kinetics = Arrhenius(
-        A = (19210, 'cm^3/(mol*s)'),
-        n = 2.549,
-        Ea = (0.743, 'kcal/mol'),
+        A = (3.832e+09, 'cm^3/(mol*s)'),
+        n = 1.415,
+        Ea = (4.792, 'kcal/mol'),
         T0 = (1, 'K'),
     ),
     rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3""",
+    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3_MESMER""",
     longDesc = 
 u"""
 Taken from entry: phenyl + ketene <=> i20
 """,
 )
 
+
+
 entry(
-    index = 178,
-    label = "C8H6-2 + HO <=> C8H7O-9",
+    index = 186,
+    label = "C2H2 + C8H5 <=> C10H7",
     degeneracy = 1,
     kinetics = Arrhenius(
-        A = (7.744e+06, 'cm^3/(mol*s)'),
-        n = 1.886,
-        Ea = (-2.895, 'kcal/mol'),
+        A = (4.068e+06, 'cm^3/(mol*s)'),
+        n = 1.842,
+        Ea = (3.272, 'kcal/mol'),
         T0 = (1, 'K'),
     ),
     rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3""",
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H4C2H_C2H2_High_P""",
     longDesc = 
 u"""
-Taken from entry: OH + phenylacetylene <=> i1
+Taken from entry: R1 + C2H2 <=> W1
 """,
 )
 
 entry(
-    index = 179,
-    label = "C8H6 + HO <=> C8H7O-10",
+    index = 187,
+    label = "C10H6 + H <=> C10H7-2",
     degeneracy = 1,
     kinetics = Arrhenius(
-        A = (111000, 'cm^3/(mol*s)'),
-        n = 2.135,
-        Ea = (-0.967, 'kcal/mol'),
+        A = (1.775e+09, 'cm^3/(mol*s)'),
+        n = 1.414,
+        Ea = (6.896, 'kcal/mol'),
         T0 = (1, 'K'),
     ),
     rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: OH_phenylacetylene_CBSQB3""",
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H4C2H_C2H2_High_P""",
     longDesc = 
 u"""
-Taken from entry: OH + phenylacetylene <=> ic1
+Taken from entry: P1 + H <=> W1
 """,
 )
 
 entry(
-    index = 180,
-    label = "C10H10-16 <=> C10H9-32 + H",
+    index = 188,
+    label = "C10H6-2 + H <=> C10H7-3",
     degeneracy = 1,
-    kinetics = Arrhenius(A=(5.401e+11, 's^-1'), n=0.549, Ea=(19.678, 'kcal/mol'), T0=(1, 'K')),
+    kinetics = Arrhenius(
+        A = (4.586e+11, 'cm^3/(mol*s)'),
+        n = 0.743,
+        Ea = (0.228, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
     rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: C3H3_C7H7_Matsugi""",
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H4C2H_C2H2_High_P""",
     longDesc = 
 u"""
-Taken from entry: W14 <=> P9 + H
+Taken from entry: P2 + H <=> W2
+""",
+)
+
+entry(
+    index = 189,
+    label = "C10H6-3 + H <=> C10H7-4",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (1.409e+12, 'cm^3/(mol*s)'),
+        n = 0.597,
+        Ea = (0.436, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H4C2H_C2H2_High_P""",
+    longDesc = 
+u"""
+Taken from entry: P2 + H <=> W4
+""",
+)
+
+entry(
+    index = 190,
+    label = "C10H6-4 + H <=> C10H7-5",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (5.179e+12, 'cm^3/(mol*s)'),
+        n = 0.61,
+        Ea = (0.09, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H4C2H_C2H2_High_P""",
+    longDesc = 
+u"""
+Taken from entry: P3 + H <=> W4
+""",
+)
+
+entry(
+    index = 191,
+    label = "C10H6-5 + H <=> C10H7-6",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (9.919e+13, 'cm^3/(mol*s)'),
+        n = 0.168,
+        Ea = (-0.002, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H4C2H_C2H2_High_P""",
+    longDesc = 
+u"""
+Taken from entry: P4 + H <=> W5
+""",
+)
+
+entry(
+    index = 192,
+    label = "C10H6-6 + H <=> C10H7-7",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (9.919e+13, 'cm^3/(mol*s)'),
+        n = 0.168,
+        Ea = (-0.002, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: 2016_Mebel_C6H4C2H_C2H2_High_P""",
+    longDesc = 
+u"""
+Taken from entry: P5 + H <=> W7
 """,
 )
 
