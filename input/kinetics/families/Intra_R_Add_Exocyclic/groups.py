@@ -53,8 +53,8 @@ entry(
     label = "R4",
     group = 
 """
-1 *1 R!H              u1 {2,[S,D,T,B]}
-2 *4 R!H              ux {1,[S,D,T,B]} {3,S}
+1 *1 R!H              u1 r0 {2,[S,D,T,B]}
+2 *4 R!H              ux r0 {1,[S,D,T,B]} {3,S}
 3 *2 [Cd,Ct,CO,N]     u0 {2,S} {4,[D,T]}
 4 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {3,[D,T]}
 """,
@@ -222,9 +222,9 @@ entry(
     label = "R5",
     group = 
 """
-1 *1 R!H                 u1 {2,[S,D,T,B]}
-2 *4 R!H                 ux {1,[S,D,T,B]} {3,[S,D,T,B]}
-3 *5 R!H                 ux {2,[S,D,T,B]} {4,S}
+1 *1 R!H                 u1 r0 {2,[S,D,T,B]}
+2 *4 R!H                 ux r0 {1,[S,D,T,B]} {3,[S,D,T,B]}
+3 *5 R!H                 ux r0 {2,[S,D,T,B]} {4,S}
 4 *2 [Cd,Ct,CO,N]        u0 {3,S} {5,[D,T]}
 5 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {4,[D,T]}
 """,
@@ -559,10 +559,10 @@ entry(
     label = "R6",
     group = 
 """
-1 *1 R!H                 u1 {2,[S,D,T,B]}
-2 *4 R!H                 ux {1,[S,D,T,B]} {3,[S,D,T,B]}
-3 *6 R!H                 ux {2,[S,D,T,B]} {4,[S,D,T,B]}
-4 *5 R!H                 ux {3,[S,D,T,B]} {5,S}
+1 *1 R!H                 u1 r0 {2,[S,D,T,B]}
+2 *4 R!H                 ux r0 {1,[S,D,T,B]} {3,[S,D,T,B]}
+3 *6 R!H                 ux r0 {2,[S,D,T,B]} {4,[S,D,T,B]}
+4 *5 R!H                 ux r0 {3,[S,D,T,B]} {5,S}
 5 *2 [Cd,Ct,CO,N]        u0 {4,S} {6,[D,T]}
 6 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {5,[D,T]}
 """,
@@ -1091,11 +1091,11 @@ entry(
     label = "R7",
     group = 
 """
-1 *1 R!H              u1 {2,[S,D,T,B]}
-2 *4 R!H              ux {1,[S,D,T,B]} {3,[S,D,T,B]}
-3 *6 R!H              ux {2,[S,D,T,B]} {4,[S,D,T,B]}
-4 *7 R!H              ux {3,[S,D,T,B]} {5,[S,D,T,B]}
-5 *5 R!H              ux {4,[S,D,T,B]} {6,S}
+1 *1 R!H              u1 r0 {2,[S,D,T,B]}
+2 *4 R!H              ux r0 {1,[S,D,T,B]} {3,[S,D,T,B]}
+3 *6 R!H              ux r0 {2,[S,D,T,B]} {4,[S,D,T,B]}
+4 *7 R!H              ux r0 {3,[S,D,T,B]} {5,[S,D,T,B]}
+5 *5 R!H              ux r0 {4,[S,D,T,B]} {6,S}
 6 *2 [Cd,Ct,CO,N]     u0 {5,S} {7,[D,T]}
 7 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {6,[D,T]}
 """,
@@ -1989,12 +1989,12 @@ entry(
     label = "R8",
     group = 
 """
-1 *1 R!H           u1 {2,[S,D,T,B]}
-2 *4 R!H           ux {1,[S,D,T,B]} {3,[S,D,T,B]}
-3 *6 R!H           ux {2,[S,D,T,B]} {4,[S,D,T,B]}
-4 *7 R!H           ux {3,[S,D,T,B]} {5,[S,D,T,B]}
-5 *8 R!H           ux {4,[S,D,T,B]} {6,[S,D,T,B]}
-6 *5 R!H           ux {5,[S,D,T,B]} {7,S}
+1 *1 R!H           u1 r0 {2,[S,D,T,B]}
+2 *4 R!H           ux r0 {1,[S,D,T,B]} {3,[S,D,T,B]}
+3 *6 R!H           ux r0 {2,[S,D,T,B]} {4,[S,D,T,B]}
+4 *7 R!H           ux r0 {3,[S,D,T,B]} {5,[S,D,T,B]}
+5 *8 R!H           ux r0 {4,[S,D,T,B]} {6,[S,D,T,B]}
+6 *5 R!H           ux r0 {5,[S,D,T,B]} {7,S}
 7 *2 [Cd,Ct,CO,N]   u0 {6,S} {8,[D,T]}
 8 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {7,[D,T]}
 """,
@@ -2006,13 +2006,13 @@ entry(
     label = "R9",
     group = 
 """
-1 *1 R!H           u1 {2,[S,D,T,B]}
-2 *4 R!H           ux {1,[S,D,T,B]} {3,[S,D,T,B]}
-3 *6 R!H           ux {2,[S,D,T,B]} {4,[S,D,T,B]}
-4 *7 R!H           ux {3,[S,D,T,B]} {5,[S,D,T,B]}
-5 *8 R!H           ux {4,[S,D,T,B]} {6,[S,D,T,B]}
-6 *9 R!H           ux {5,[S,D,T,B]} {7,[S,D,T,B]}
-7 *5 R!H           ux {6,[S,D,T,B]} {8,S}
+1 *1 R!H           u1 r0 {2,[S,D,T,B]}
+2 *4 R!H           ux r0 {1,[S,D,T,B]} {3,[S,D,T,B]}
+3 *6 R!H           ux r0 {2,[S,D,T,B]} {4,[S,D,T,B]}
+4 *7 R!H           ux r0 {3,[S,D,T,B]} {5,[S,D,T,B]}
+5 *8 R!H           ux r0 {4,[S,D,T,B]} {6,[S,D,T,B]}
+6 *9 R!H           ux r0 {5,[S,D,T,B]} {7,[S,D,T,B]}
+7 *5 R!H           ux r0 {6,[S,D,T,B]} {8,S}
 8 *2 [Cd,Ct,CO,N]     u0 {7,S} {9,[D,T]}
 9 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {8,[D,T]}
 """,
