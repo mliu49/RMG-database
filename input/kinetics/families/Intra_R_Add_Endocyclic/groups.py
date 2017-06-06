@@ -2656,3 +2656,20 @@ u"""
 """,
 )
 
+forbidden(
+    label = "benzene",
+    group =
+"""
+1 *2 C u0 p0 c0 {2,D} {6,S}
+2 *3 C u0 p0 c0 {1,D} {3,S}
+3    C u0 p0 c0 {2,S} {4,D}
+4    C u0 p0 c0 {3,D} {5,S}
+5    C u0 p0 c0 {4,S} {6,D}
+6    C u0 p0 c0 {1,S} {5,D}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Should react in Intra_R_Add_Polycyclic instead
+""",
+)
