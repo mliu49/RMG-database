@@ -2657,6 +2657,38 @@ u"""
 )
 
 forbidden(
+    label = "multiplebond_ring_1",
+    group =
+"""
+1 *2 R!H u0 r1 {2,[S,D,B]} {3,[S,D,T,B]}
+2 *3 R!H u0 r1 {1,[S,D,B]}
+3 *4 R!H u0 r1 {1,[S,D,T,B]}
+4 *1 R!H u1 r0
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+
+""",
+)
+
+forbidden(
+    label = "multiplebond_ring_2",
+    group =
+"""
+1 *2 R!H u0 r1 {2,[S,D,B]} {3,[S,D,T,B]}
+2 *3 R!H u0 r1 {1,[S,D,B]}
+3 *5 R!H u0 r1 {1,[S,D,T,B]}
+4 *1 R!H u1 r0
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+
+""",
+)
+
+forbidden(
     label = "benzene",
     group =
 """
