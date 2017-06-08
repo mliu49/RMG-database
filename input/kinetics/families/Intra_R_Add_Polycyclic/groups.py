@@ -23,7 +23,7 @@ boundaryAtoms = ["*1", "*2"]
 entry(
     index = 1,
     label = "Rn_cyclic",
-    group = "OR{Rn1cx, Rn2cx, Rn3cx, Rn4cx}",
+    group = "OR{Rn1cx, Rn2cx, Rn3cx, Rn4cx, Rn5cx}",
     kinetics = None,
 )
 
@@ -218,6 +218,20 @@ entry(
     index = 290,
     label = "Rn4cx_alpha",
     group = "OR{Rn4c3_alpha, Rn4c4_alpha, Rn4c5_alpha, Rn4c6_alpha, Rn4c7_alpha, Rn4c8_alpha}",
+    kinetics = None,
+)
+
+entry(
+    index = 290,
+    label = "Rn5cx",
+    group = "OR{Rn5cx_alpha}",
+    kinetics = None,
+)
+
+entry(
+    index = 290,
+    label = "Rn5cx_alpha",
+    group = "OR{Rn5c3_alpha, Rn5c4_alpha, Rn5c5_alpha, Rn5c6_alpha, Rn5c7_alpha, Rn5c8_alpha}",
     kinetics = None,
 )
 
@@ -1289,6 +1303,123 @@ entry(
     kinetics = None,
 )
 
+entry(
+    index = 254,
+    label = "Rn5c3_alpha",
+    group =
+"""
+1 *2 R!H u0 r1 {2,[D,T,B]} {3,[S,D,T,B]}
+2 *3 R!H u0 r1 {1,[D,T,B]} {3,[S,D,T,B]}
+3 *5 R!H ux r1 {2,[S,D,T,B]} {1,[S,D,T,B]} {4,[S,D,T,B]}
+4 *8 R!H ux r0 {3,[S,D,T,B]} {5,[S,D,T,B]}
+5 *7 R!H ux r0 {4,[S,D,T,B]} {6,[S,D,T,B]}
+6 *6 R!H ux r0 {5,[S,D,T,B]} {7,[S,D,T,B]}
+7 *4 R!H ux r0 {6,[S,D,T,B]} {8,[S,D,T,B]}
+8 *1 R!H u1 r0 {7,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 260,
+    label = "Rn5c4_alpha",
+    group =
+"""
+1 *2 R!H u0 r1 {2,[D,T,B]} {4,[S,D,T,B]}
+2 *3 R!H u0 r1 {1,[D,T,B]} {3,[S,D,T,B]}
+3    R!H ux r1 {2,[S,D,T,B]} {4,[S,D,T,B]}
+4 *5 R!H ux r1 {3,[S,D,T,B]} {1,[S,D,T,B]} {5,[S,D,T,B]}
+5 *8 R!H ux r0 {4,[S,D,T,B]} {6,[S,D,T,B]}
+6 *7 R!H ux r0 {5,[S,D,T,B]} {7,[S,D,T,B]}
+7 *6 R!H ux r0 {6,[S,D,T,B]} {8,[S,D,T,B]}
+8 *4 R!H ux r0 {7,[S,D,T,B]} {9,[S,D,T,B]}
+9 *1 R!H u1 r0 {8,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 270,
+    label = "Rn5c5_alpha",
+    group =
+"""
+1  *2 R!H u0 r1 {2,[D,T,B]} {5,[S,D,T,B]}
+2  *3 R!H u0 r1 {1,[D,T,B]} {3,[S,D,T,B]}
+3     R!H ux r1 {2,[S,D,T,B]} {4,[S,D,T,B]}
+4     R!H ux r1 {3,[S,D,T,B]} {5,[S,D,T,B]}
+5  *5 R!H ux r1 {4,[S,D,T,B]} {1,[S,D,T,B]} {6,[S,D,T,B]}
+6  *8 R!H ux    {5,[S,D,T,B]} {7,[S,D,T,B]}
+7  *7 R!H ux r0 {6,[S,D,T,B]} {8,[S,D,T,B]}
+8  *6 R!H ux r0 {7,[S,D,T,B]} {9,[S,D,T,B]}
+9  *4 R!H ux r0 {8,[S,D,T,B]} {10,[S,D,T,B]}
+10 *1 R!H u1 r0 {9,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 284,
+    label = "Rn5c6_alpha",
+    group =
+"""
+1  *2 R!H u0 r1 {2,[D,T,B]} {6,[S,D,T,B]}
+2  *3 R!H u0 r1 {1,[D,T,B]} {3,[S,D,T,B]}
+3     R!H ux r1 {2,[S,D,T,B]} {4,[S,D,T,B]}
+4     R!H ux r1 {3,[S,D,T,B]} {5,[S,D,T,B]}
+5     R!H ux r1 {4,[S,D,T,B]} {6,[S,D,T,B]}
+6  *5 R!H ux r1 {5,[S,D,T,B]} {1,[S,D,T,B]} {7,[S,D,T,B]}
+7  *8 R!H ux    {6,[S,D,T,B]} {8,[S,D,T,B]}
+8  *7 R!H ux r0 {7,[S,D,T,B]} {9,[S,D,T,B]}
+9  *6 R!H ux r0 {8,[S,D,T,B]} {10,[S,D,T,B]}
+10 *4 R!H ux r0 {9,[S,D,T,B]} {11,[S,D,T,B]}
+11 *1 R!H u1 r0 {10,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 302,
+    label = "Rn5c7_alpha",
+    group =
+"""
+1  *2 R!H u0 r1 {2,[D,T,B]} {7,[S,D,T,B]}
+2  *3 R!H u0 r1 {1,[D,T,B]} {3,[S,D,T,B]}
+3     R!H ux r1 {2,[S,D,T,B]} {4,[S,D,T,B]}
+4     R!H ux r1 {3,[S,D,T,B]} {5,[S,D,T,B]}
+5     R!H ux r1 {4,[S,D,T,B]} {6,[S,D,T,B]}
+6     R!H ux r1 {5,[S,D,T,B]} {7,[S,D,T,B]}
+7  *5 R!H ux r1 {6,[S,D,T,B]} {1,[S,D,T,B]} {8,[S,D,T,B]}
+8  *8 R!H ux    {7,[S,D,T,B]} {9,[S,D,T,B]}
+9  *7 R!H ux r0 {8,[S,D,T,B]} {10,[S,D,T,B]}
+10 *6 R!H ux r0 {9,[S,D,T,B]} {11,[S,D,T,B]}
+11 *4 R!H ux r0 {10,[S,D,T,B]} {12,[S,D,T,B]}
+12 *1 R!H u1 r0 {11,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 320,
+    label = "Rn5c8_alpha",
+    group =
+"""
+1  *2 R!H u0 r1 {2,[D,T,B]} {8,[S,D,T,B]}
+2  *3 R!H u0 r1 {1,[D,T,B]} {3,[S,D,T,B]}
+3     R!H ux r1 {2,[S,D,T,B]} {4,[S,D,T,B]}
+4     R!H ux r1 {3,[S,D,T,B]} {5,[S,D,T,B]}
+5     R!H ux r1 {4,[S,D,T,B]} {6,[S,D,T,B]}
+6     R!H ux r1 {5,[S,D,T,B]} {7,[S,D,T,B]}
+7     R!H ux r1 {6,[S,D,T,B]} {8,[S,D,T,B]}
+8  *5 R!H ux r1 {7,[S,D,T,B]} {1,[S,D,T,B]} {9,[S,D,T,B]}
+9  *8 R!H ux    {8,[S,D,T,B]} {10,[S,D,T,B]}
+10 *7 R!H ux r0 {9,[S,D,T,B]} {11,[S,D,T,B]}
+11 *6 R!H ux r0 {10,[S,D,T,B]} {12,[S,D,T,B]}
+12 *4 R!H ux r0 {11,[S,D,T,B]} {13,[S,D,T,B]}
+13 *1 R!H u1 r0 {12,[S,D,T,B]}
+""",
+    kinetics = None,
+)
+
 ################################################################################
 
 
@@ -1729,6 +1860,14 @@ L1: Rn_cyclic
             L4: Rn4c6_alpha
             L4: Rn4c7_alpha
             L4: Rn4c8_alpha
+    L2: Rn5cx
+        L3: Rn5cx_alpha
+            L4: Rn5c3_alpha
+            L4: Rn5c4_alpha
+            L4: Rn5c5_alpha
+            L4: Rn5c6_alpha
+            L4: Rn5c7_alpha
+            L4: Rn5c8_alpha
 L1: multiplebond_intra
     L2: doublebond_intra
     L2: triplebond_intra
