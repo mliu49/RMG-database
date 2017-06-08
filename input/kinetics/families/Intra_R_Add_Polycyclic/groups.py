@@ -398,7 +398,7 @@ entry(
 3    R!H ux r1 {2,[S,D,T,B]} {4,[S,D,T,B]}
 4    R!H ux r1 {3,[S,D,T,B]} {5,[S,D,T,B]}
 5 *5 R!H ux r1 {4,[S,D,T,B]} {1,[S,D,T,B]} {6,[S,D,T,B]}
-6 *7 R!H ux r0 {5,[S,D,T,B]} {7,[S,D,T,B]}
+6 *7 R!H ux    {5,[S,D,T,B]} {7,[S,D,T,B]}
 7 *6 R!H ux r0 {6,[S,D,T,B]} {8,[S,D,T,B]}
 8 *4 R!H ux r0 {7,[S,D,T,B]} {9,[S,D,T,B]}
 9 *1 R!H u1 r0 {8,[S,D,T,B]}
@@ -416,7 +416,7 @@ entry(
 3    R!H ux r1 {2,[S,D,T,B]} {4,[S,D,T,B]}
 4    R!H ux r1 {3,[S,D,T,B]} {5,[S,D,T,B]}
 5 *5 R!H ux r1 {4,[S,D,T,B]} {1,[S,D,T,B]} {6,[S,D,T,B]}
-6 *6 R!H ux r0 {5,[S,D,T,B]} {7,[S,D,T,B]}
+6 *6 R!H ux    {5,[S,D,T,B]} {7,[S,D,T,B]}
 7 *4 R!H ux r0 {6,[S,D,T,B]} {8,[S,D,T,B]}
 8 *1 R!H u1 r0 {7,[S,D,T,B]}
 """,
@@ -561,7 +561,7 @@ entry(
 4     R!H ux r1 {3,[S,D,T,B]} {5,[S,D,T,B]}
 5     R!H ux r1 {4,[S,D,T,B]} {6,[S,D,T,B]}
 6  *5 R!H ux r1 {5,[S,D,T,B]} {1,[S,D,T,B]} {7,[S,D,T,B]}
-7  *7 R!H ux r0 {6,[S,D,T,B]} {8,[S,D,T,B]}
+7  *7 R!H ux    {6,[S,D,T,B]} {8,[S,D,T,B]}
 8  *6 R!H ux r0 {7,[S,D,T,B]} {9,[S,D,T,B]}
 9  *4 R!H ux r0 {8,[S,D,T,B]} {10,[S,D,T,B]}
 10 *1 R!H u1 r0 {9,[S,D,T,B]}
@@ -580,7 +580,7 @@ entry(
 4    R!H ux r1 {3,[S,D,T,B]} {5,[S,D,T,B]}
 5    R!H ux r1 {4,[S,D,T,B]} {6,[S,D,T,B]}
 6 *5 R!H ux r1 {5,[S,D,T,B]} {1,[S,D,T,B]} {7,[S,D,T,B]}
-7 *6 R!H ux r0 {6,[S,D,T,B]} {8,[S,D,T,B]}
+7 *6 R!H ux    {6,[S,D,T,B]} {8,[S,D,T,B]}
 8 *4 R!H ux r0 {7,[S,D,T,B]} {9,[S,D,T,B]}
 9 *1 R!H u1 r0 {8,[S,D,T,B]}
 """,
@@ -766,7 +766,7 @@ entry(
 5     R!H ux r1 {4,[S,D,T,B]} {6,[S,D,T,B]}
 6     R!H ux r1 {5,[S,D,T,B]} {7,[S,D,T,B]}
 7  *5 R!H ux r1 {6,[S,D,T,B]} {1,[S,D,T,B]} {8,[S,D,T,B]}
-8  *7 R!H ux r0 {7,[S,D,T,B]} {9,[S,D,T,B]}
+8  *7 R!H ux    {7,[S,D,T,B]} {9,[S,D,T,B]}
 9  *6 R!H ux r0 {8,[S,D,T,B]} {10,[S,D,T,B]}
 10 *4 R!H ux r0 {9,[S,D,T,B]} {11,[S,D,T,B]}
 11 *1 R!H u1 r0 {10,[S,D,T,B]}
@@ -786,7 +786,7 @@ entry(
 5     R!H ux r1 {4,[S,D,T,B]} {6,[S,D,T,B]}
 6     R!H ux r1 {5,[S,D,T,B]} {7,[S,D,T,B]}
 7  *5 R!H ux r1 {6,[S,D,T,B]} {1,[S,D,T,B]} {8,[S,D,T,B]}
-8  *6 R!H ux r0 {7,[S,D,T,B]} {9,[S,D,T,B]}
+8  *6 R!H ux    {7,[S,D,T,B]} {9,[S,D,T,B]}
 9  *4 R!H ux r0 {8,[S,D,T,B]} {10,[S,D,T,B]}
 10 *1 R!H u1 r0 {9,[S,D,T,B]}
 """,
@@ -1019,7 +1019,7 @@ entry(
 6     R!H ux r1 {5,[S,D,T,B]} {7,[S,D,T,B]}
 7     R!H ux r1 {6,[S,D,T,B]} {8,[S,D,T,B]}
 8  *5 R!H ux r1 {7,[S,D,T,B]} {1,[S,D,T,B]} {9,[S,D,T,B]}
-9  *7 R!H ux r0 {8,[S,D,T,B]} {10,[S,D,T,B]}
+9  *7 R!H ux    {8,[S,D,T,B]} {10,[S,D,T,B]}
 10 *6 R!H ux r0 {9,[S,D,T,B]} {11,[S,D,T,B]}
 11 *4 R!H ux r0 {10,[S,D,T,B]} {12,[S,D,T,B]}
 12 *1 R!H u1 r0 {11,[S,D,T,B]}
@@ -1040,7 +1040,7 @@ entry(
 6     R!H ux r1 {5,[S,D,T,B]} {7,[S,D,T,B]}
 7     R!H ux r1 {6,[S,D,T,B]} {8,[S,D,T,B]}
 8  *5 R!H ux r1 {7,[S,D,T,B]} {1,[S,D,T,B]} {9,[S,D,T,B]}
-9  *6 R!H ux r0 {8,[S,D,T,B]} {10,[S,D,T,B]}
+9  *6 R!H ux    {8,[S,D,T,B]} {10,[S,D,T,B]}
 10 *4 R!H ux r0 {9,[S,D,T,B]} {11,[S,D,T,B]}
 11 *1 R!H u1 r0 {10,[S,D,T,B]}
 """,
