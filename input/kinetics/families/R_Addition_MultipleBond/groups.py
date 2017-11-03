@@ -21,7 +21,11 @@ recipe(actions=[
 entry(
     index = 1,
     label = "R_R",
-    group = "OR{Cd_R, Ct_R, Od_R, Sd_R, Nd_R, Nt_R, Cb_Cb}",
+    group =
+"""
+1 *1 R!H u0 {2,[D,T,B]}
+2 *2 R!H u0 {1,[D,T,B]}
+""",
     kinetics = None,
 )
 
