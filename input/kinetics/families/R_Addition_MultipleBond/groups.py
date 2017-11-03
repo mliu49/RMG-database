@@ -16636,10 +16636,10 @@ entry(
     label = "Cb-R!H_Cb-R!H",
     group =
 """
-1 *1 [Cb,Cbf] u0 {2,B} {3,S} {5,[S,B]}
-2 *2 [Cb,Cbf] u0 {1,B} {4,S} {6,[S,B]}
-3 [Cb,Cbf] u0 {1,S}
-4 [Cb,Cbf] u0 {2,S}
+1 *1 [Cb,Cbf] u0 {2,B} {3,B} {5,[S,B]}
+2 *2 [Cb,Cbf] u0 {1,B} {4,B} {6,[S,B]}
+3 [Cb,Cbf] u0 {1,B}
+4 [Cb,Cbf] u0 {2,B}
 5 R!H u0 {1,[S,B]}
 6 R!H u0 {2,[S,B]}
 """,
