@@ -16666,9 +16666,14 @@ entry(
     label = "Cbf-Cb-cyclic_Cb-H",
     group =
 """
-1 *1 Cbf u0 {2,B}
-2 *2 Cb u0 {1,B} {3,S}
-3 H  u0 {2,S}
+1 *1 Cbf u0 {2,B} {3,B} {4,B}
+2 *2 Cb u0 {1,B} {8,S}
+3    Cbf u0 {1,B} {7,B}
+4    [Cb,Cbf] u0 {1,B} {5,B}
+5    [Cb,Cbf] u0 {4,B} {6,B}
+6    [Cb,Cbf] u0 {5,B} {7,B}
+7    [Cb,Cbf] u0 {6,B} {3,B}
+8    H u0 {2,S}
 """,
     kinetics = None,
 )
