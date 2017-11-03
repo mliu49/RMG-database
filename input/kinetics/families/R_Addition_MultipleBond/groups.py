@@ -16623,10 +16623,9 @@ entry(
     group =
 """
 1 *1 [Cb,Cbf] u0 {2,B} {3,[S,B]} {4,B}
-2 *2 [Cb,Cbf] u0 {1,B} {5,B}
-3 R!H u0 {1,[S,B]}
-4 [Cb,Cbf] u0 {1,B}
-5 [Cb,Cbf] u0 {2,B}
+2 *2 [Cb,Cbf] u0 {1,B}
+3    R!H      u0 {1,[S,B]}
+4    [Cb,Cbf] u0 {1,B}
 """,
     kinetics = None,
 )
@@ -16638,10 +16637,10 @@ entry(
 """
 1 *1 [Cb,Cbf] u0 {2,B} {3,B} {5,[S,B]}
 2 *2 [Cb,Cbf] u0 {1,B} {4,B} {6,[S,B]}
-3 [Cb,Cbf] u0 {1,B}
-4 [Cb,Cbf] u0 {2,B}
-5 R!H u0 {1,[S,B]}
-6 R!H u0 {2,[S,B]}
+3    [Cb,Cbf] u0 {1,B}
+4    [Cb,Cbf] u0 {2,B}
+5    R!H      u0 {1,[S,B]}
+6    R!H      u0 {2,[S,B]}
 """,
     kinetics = None,
 )
@@ -16652,11 +16651,10 @@ entry(
     group =
 """
 1 *1 [Cb,Cbf] u0 {2,B} {3,[S,B]} {5,B}
-2 *2 [Cb,Cbf] u0 {1,B} {4,S} {6,B}
-3 R!H u0 {1,[S,B]}
-4 H u0 {2,S}
-5 [Cb,Cbf] u0 {1,B}
-6 [Cb,Cbf] u0 {2,B}
+2 *2 [Cb,Cbf] u0 {1,B} {4,S}
+3    R!H      u0 {1,[S,B]}
+4    H        u0 {2,S}
+5    [Cb,Cbf] u0 {1,B}
 """,
     kinetics = None,
 )
@@ -16666,14 +16664,14 @@ entry(
     label = "Cbf-Cb-cyclic_Cb-H",
     group =
 """
-1 *1 Cbf u0 {2,B} {3,B} {4,B}
-2 *2 Cb u0 {1,B} {8,S}
-3    Cbf u0 {1,B} {7,B}
+1 *1 Cbf      u0 {2,B} {3,B} {4,B}
+2 *2 Cb       u0 {1,B} {8,S}
+3    Cbf      u0 {1,B} {7,B}
 4    [Cb,Cbf] u0 {1,B} {5,B}
 5    [Cb,Cbf] u0 {4,B} {6,B}
 6    [Cb,Cbf] u0 {5,B} {7,B}
 7    [Cb,Cbf] u0 {6,B} {3,B}
-8    H u0 {2,S}
+8    H        u0 {2,S}
 """,
     kinetics = None,
 )
@@ -16683,9 +16681,9 @@ entry(
     label = "Cb-H_Cb",
     group =
 """
-1 *1 Cb u0 {2,B} {3,S}
+1 *1 Cb       u0 {2,B} {3,S}
 2 *2 [Cb,Cbf] u0 {1,B}
-3 H u0 {1,S}
+3    H        u0 {1,S}
 """,
     kinetics = None,
 )
@@ -16695,11 +16693,11 @@ entry(
     label = "Cb-H_Cb-R!H",
     group =
 """
-1 *1 Cb u0 {2,B} {3,S}
-2 *2 [Cb,Cbf] u0 {1,B} {4,[S,D,T,B]} {5,B}
-3 H u0 {1,S}
-4 R!H u0 {2,[S,D,T,B]}
-5 [Cb,Cbf] u0 {2,B}
+1 *1 Cb       u0 {2,B} {3,S}
+2 *2 [Cb,Cbf] u0 {1,B} {4,[S,B]} {5,B}
+3    H        u0 {1,S}
+4    R!H      u0 {2,[S,B]}
+5    [Cb,Cbf] u0 {2,B}
 """,
     kinetics = None,
 )
@@ -16709,9 +16707,11 @@ entry(
     label = "Cb-H_Cbf-Cb",
     group =
 """
-1 *1 Cb u0 {2,B} {3,S}
-2 *2 Cbf u0 {1,B}
-3 H u0 {1,S}
+1 *1 Cb       u0 {2,B} {3,S}
+2 *2 Cbf      u0 {1,B} {4,B} {5,B}
+3    H        u0 {1,S}
+4    [Cb,Cbf] u0 {2,B}
+5    [Cb,Cbf] u0 {2,B}
 """,
     kinetics = None,
 )
@@ -16723,8 +16723,8 @@ entry(
 """
 1 *1 Cb u0 {2,B} {3,S}
 2 *2 Cb u0 {1,B} {4,S}
-3 H u0 {1,S}
-4 H u0 {2,S}
+3    H  u0 {1,S}
+4    H  u0 {2,S}
 """,
     kinetics = None,
 )
@@ -16734,11 +16734,13 @@ entry(
     label = "Cb-indeneDe_Cb-indeneNde",
     group =
 """
-1 *1 Cb u0 {2,B} {3,S}
-2 *2 Cb u0 {1,B} {4,S}
-3 Cd u0 {1,S} {5,D}
-4 C u0 {2,S} {5,S}
-5 Cd u0 {3,D} {4,S}
+1 *1 Cb       u0 {2,B} {3,S} {6,B}
+2 *2 Cb       u0 {1,B} {4,S} {7,B}
+3    Cd       u0 {1,S} {5,D}
+4    C        u0 {2,S} {5,S}
+5    Cd       u0 {3,D} {4,S}
+6    [Cb,Cbf] u0 {1,B}
+7    [Cb,Cbf] u0 {2,B}
 """,
     kinetics = None,
 )
@@ -16748,11 +16750,13 @@ entry(
     label = "Cb-indeneNde_Cb-indene_De",
     group =
 """
-1 *2 Cb u0 {2,B} {3,S}
-2 *1 Cb u0 {1,B} {4,S}
-3 Cd u0 {1,S} {5,D}
-4 C u0 {2,S} {5,S}
-5 Cd u0 {3,D} {4,S}
+1 *2 Cb u0 {2,B} {3,S} {6,B}
+2 *1 Cb u0 {1,B} {4,S} {7,B}
+3    Cd u0 {1,S} {5,D}
+4    C  u0 {2,S} {5,S}
+5    Cd u0 {3,D} {4,S}
+6    [Cb,Cbf] u0 {1,B}
+7    [Cb,Cbf] u0 {2,B}
 """,
     kinetics = None,
 )
@@ -16762,13 +16766,13 @@ entry(
     label = "Cb-H_Cb-indeneNde",
     group =
 """
-1 Cb u0 {2,B} {4,S}
+1    Cb u0 {2,B} {4,S}
 2 *2 Cb u0 {1,B} {3,B} {5,S}
 3 *1 Cb u0 {2,B} {7,S}
-4 Cd u0 {1,S} {6,D}
-5 C u0 {2,S} {6,S}
-6 Cd u0 {4,D} {5,S}
-7 H u0 {3,S}
+4    Cd u0 {1,S} {6,D}
+5    C  u0 {2,S} {6,S}
+6    Cd u0 {4,D} {5,S}
+7    H  u0 {3,S}
 """,
     kinetics = None,
 )
@@ -16778,14 +16782,14 @@ entry(
     label = "Cb-H_Cb-H_o_ketene",
     group =
 """
-1 *1 Cb u0 {2,B} {3,B} {4,S}
-2 *2 Cb u0 {1,B} {5,S}
-3 Cb u0 {1,B} {6,S}
-4 H u0 {1,S}
-5 H u0 {2,S}
-6 Cd u0 {3,S} {7,D}
-7 Cdd u0 {6,D} {8,D}
-8 O u0 {7,D}
+1 *1 Cb  u0 {2,B} {3,B} {4,S}
+2 *2 Cb  u0 {1,B} {5,S}
+3    Cb  u0 {1,B} {6,S}
+4    H   u0 {1,S}
+5    H   u0 {2,S}
+6    Cd  u0 {3,S} {7,D}
+7    Cdd u0 {6,D} {8,D}
+8    O   u0 {7,D}
 """,
     kinetics = None,
 )
@@ -16795,26 +16799,27 @@ entry(
     label = "Cb-benzofuranNde_Cb-benzofuranDe",
     group =
 """
-1 *1 Cb u0 {2,B} {3,S}
-2 *2 Cb u0 {1,B} {4,S}
-3 O u0 {1,S} {5,S}
-4 C u0 {2,S} {5,D}
-5 C u0 {3,S} {4,D}
+1 *1 Cb u0 {2,B} {3,S} {6,B}
+2 *2 Cb u0 {1,B} {4,S} {7,B}
+3    O  u0 {1,S} {5,S}
+4    C  u0 {2,S} {5,D}
+5    C  u0 {3,S} {4,D}
+6    [Cb,Cbf] u0 {1,B}
+7    [Cb,Cbf] u0 {2,B}
 """,
     kinetics = None,
 )
 
 entry(
     index = 1073,
-    label = "Cb-Cs_Cb",
+    label = "Cb-Cs_Cb-H",
     group =
 """
 1 *1 Cb u0 {2,B} {3,S} {5,B}
-2 *2 Cb u0 {1,B} {4,S} {6,B}
-3 Cs u0 {1,S}
-4 H u0 {2,S}
-5 Cb u0 {1,B}
-6 Cb u0 {2,B}
+2 *2 Cb u0 {1,B} {4,S}
+3    Cs u0 {1,S}
+4    H  u0 {2,S}
+5    Cb u0 {1,B}
 """,
     kinetics = None,
 )
@@ -16824,14 +16829,11 @@ entry(
     label = "Cb-H_Cb-C-Ortho",
     group =
 """
-1 *2 Cb u0 {2,B} {3,B} {7,S}
-2 *1 Cb u0 {1,B} {6,B} {8,S}
-3    [Cb,Cbf] u0 {1,B} {4,B}
-4    [Cb,Cbf] u0 {3,B} {5,B}
-5    [Cb,Cbf] u0 {4,B} {6,B}
-6    [Cb,Cbf] u0 {5,B} {2,B}
-7    C u0 {1,S}
-8    H u0 {2,S}
+1 *1 Cb       u0 {2,B} {3,S}
+2 *2 Cb       u0 {1,B} {4,S} {5,B}
+3    H        u0 {1,S}
+4    C        u0 {2,S}
+5    [Cb,Cbf] u0 {2,B}
 """,
     kinetics = None,
 )
@@ -16841,12 +16843,12 @@ entry(
     label = "Cb-H_Cb-H-Meta",
     group =
 """
-1    [Cb,Cbf] u0 {2,B} {4,S}
-2 *2 Cb u0 {1,B} {3,B} {5,S}
-3 *1 Cb u0 {2,B} {6,S}
-4    [R!H] u0 {1,S}
-5    H u0 {2,S}
-6    H u0 {3,S}
+1 *1 Cb       u0 {2,B} {6,S}
+2 *2 Cb       u0 {1,B} {3,B} {5,S}
+3    [Cb,Cbf] u0 {2,B} {4,S}
+4    [R!H]    u0 {3,S}
+5    H        u0 {2,S}
+6    H        u0 {1,S}
 """,
     kinetics = None,
 )
@@ -16856,13 +16858,13 @@ entry(
     label = "Cb-H_Cb-H-Para",
     group =
 """
-1    [Cb,Cbf] u0 {2,B} {5,S}
-2    [Cb,Cbf] u0 {1,B} {3,B}
-3 *2 Cb u0 {2,B} {4,B} {6,S}
-4 *1 Cb u0 {3,B} {7,S}
-5    [R!H] u0 {1,S}
-6    H u0 {3,S}
-7    H u0 {4,S}
+1 *1 Cb       u0 {2,B} {7,S}
+2 *2 Cb       u0 {1,B} {4,B} {6,S}
+3    [Cb,Cbf] u0 {4,B} {5,S}
+4    [Cb,Cbf] u0 {2,B} {3,B}
+5    [R!H]    u0 {3,S}
+6    H        u0 {2,S}
+7    H        u0 {1,S}
 """,
     kinetics = None,
 )
@@ -16873,26 +16875,27 @@ entry(
     group =
 """
 1 *1 [Cb,Cbf] u0 {2,B} {3,B} {4,[S,B]}
-2 *2 Cb u0 {1,B} {8,S}
+2 *2 Cb       u0 {1,B} {8,S}
 3    [Cb,Cbf] u0 {1,B} {7,[S,B]}
-4    C u0 {1,[S,B]} {5,[S,D,T,B]}
-5    C u0 {4,[S,D,T,B]} {6,[S,D,T,B]}
-6    C u0 {5,[S,D,T,B]} {7,[S,D,T,B]}
-7   C u0 {6,[S,D,T,B]} {3,[S,B]}
-8   H u0 {2,S}
+4    C        u0 {1,[S,B]} {5,[S,D,T,B]}
+5    C        u0 {4,[S,D,T,B]} {6,[S,D,T,B]}
+6    C        u0 {5,[S,D,T,B]} {7,[S,D,T,B]}
+7    C        u0 {6,[S,D,T,B]} {3,[S,B]}
+8    H        u0 {2,S}
 """,
     kinetics = None,
 )
 
 entry(
     index = 1078,
-    label = "Cb-Cd_Cb",
+    label = "Cb-Cd_Cb-H",
     group =
 """
-1 *1 Cb u0 {2,B} {7,S}
-2 *2 Cb u0 {1,B} {8,S}
-7 Cd u0 {1,S}
-8 H u0 {2,S}
+1 *1 Cb u0 {2,B} {3,S} {5,B}
+2 *2 Cb u0 {1,B} {4,S}
+3    Cd u0 {1,S}
+4    H  u0 {2,S}
+5    Cb u0 {1,B}
 """,
     kinetics = None,
 )
@@ -16909,8 +16912,8 @@ L1: R_R
             L4: Cb-R!H_Cb-H
                 L5: Cb-C-cyclic_Cb-H
                     L6: Cbf-Cb-cyclic_Cb-H
-                L5: Cb-Cd_Cb
-                L5: Cb-Cs_Cb
+                L5: Cb-Cd_Cb-H
+                L5: Cb-Cs_Cb-H
         L3: Cb-H_Cb
             L4: Cb-H_Cb-R!H
                 L5: Cb-H_Cb-indeneNde
