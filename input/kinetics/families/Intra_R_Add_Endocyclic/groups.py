@@ -5491,56 +5491,29 @@ entry(
 
 entry(
     index = 376,
-    label = "benzenebond_intra_R",
+    label = "benzenebond_intra_CbCb",
     group = 
 """
-1 *2 Cb  u0 r1 {2,B} {3,S}
-2 *3 Cb  u0 c0 r1 {1,B}
-3    R!H u0 {1,S}
+1 *2 Cb u0 r1 {2,B}
+2 *3 Cb u0 c0 r1 {1,B}
 """,
     kinetics = None,
 )
 
 entry(
     index = 377,
-    label = "benzenebond_intra_RH",
+    label = "benzenebond_intra_CbCbH",
     group = 
 """
-1 *2 Cb  u0 r1 {2,B} {3,S}
-2 *3 Cb  u0 c0 r1 {1,B} {4,S}
-3    R!H u0 {1,S}
-4    H   u0 {2,S}
+1 *2 Cb u0 r1 {2,B}
+2 *3 Cb u0 c0 r1 {1,B} {3,S}
+3    H  u0 {2,S}
 """,
     kinetics = None,
 )
 
 entry(
     index = 378,
-    label = "benzenebond_intra_H",
-    group = 
-"""
-1 *2 Cb u0 r1 {2,B} {3,S}
-2 *3 Cb u0 c0 r1 {1,B}
-3    H  u0 {1,S}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 379,
-    label = "benzenebond_intra_HH",
-    group = 
-"""
-1 *2 Cb u0 r1 {2,B} {3,S}
-2 *3 Cb u0 c0 r1 {1,B} {4,S}
-3    H  u0 {1,S}
-4    H  u0 {2,S}
-""",
-    kinetics = None,
-)
-
-entry(
-    index = 380,
     label = "benzenebond_intra_CbCbf",
     group = 
 """
@@ -5551,7 +5524,7 @@ entry(
 )
 
 entry(
-    index = 381,
+    index = 379,
     label = "benzenebond_intra_CbfCb",
     group = 
 """
@@ -5562,7 +5535,7 @@ entry(
 )
 
 entry(
-    index = 382,
+    index = 380,
     label = "benzenebond_intra_CbfCbf",
     group = 
 """
@@ -5573,7 +5546,7 @@ entry(
 )
 
 entry(
-    index = 383,
+    index = 381,
     label = "carbonyl_intra",
     group = 
 """
@@ -5584,7 +5557,7 @@ entry(
 )
 
 entry(
-    index = 384,
+    index = 382,
     label = "carbonyl_intra_H",
     group = 
 """
@@ -5596,7 +5569,7 @@ entry(
 )
 
 entry(
-    index = 385,
+    index = 383,
     label = "carbonyl_intra_Nd",
     group = 
 """
@@ -5608,7 +5581,7 @@ entry(
 )
 
 entry(
-    index = 386,
+    index = 384,
     label = "carbonyl_intra_De",
     group = 
 """
@@ -5620,7 +5593,7 @@ entry(
 )
 
 entry(
-    index = 387,
+    index = 385,
     label = "thiyl_intra",
     group = 
 """
@@ -5631,7 +5604,7 @@ entry(
 )
 
 entry(
-    index = 388,
+    index = 386,
     label = "thiyl_intra_H",
     group = 
 """
@@ -5643,7 +5616,7 @@ entry(
 )
 
 entry(
-    index = 389,
+    index = 387,
     label = "thiyl_intra_Nd",
     group = 
 """
@@ -5655,7 +5628,7 @@ entry(
 )
 
 entry(
-    index = 390,
+    index = 388,
     label = "thiyl_intra_De",
     group = 
 """
@@ -5667,7 +5640,7 @@ entry(
 )
 
 entry(
-    index = 391,
+    index = 389,
     label = "radadd_intra_cs",
     group = 
 """
@@ -5677,7 +5650,7 @@ entry(
 )
 
 entry(
-    index = 392,
+    index = 390,
     label = "radadd_intra_cs2H",
     group = 
 """
@@ -5689,7 +5662,7 @@ entry(
 )
 
 entry(
-    index = 393,
+    index = 391,
     label = "radadd_intra_csHNd",
     group = 
 """
@@ -5701,7 +5674,7 @@ entry(
 )
 
 entry(
-    index = 394,
+    index = 392,
     label = "radadd_intra_csHDe",
     group = 
 """
@@ -5713,7 +5686,7 @@ entry(
 )
 
 entry(
-    index = 395,
+    index = 393,
     label = "radadd_intra_csHCd",
     group = 
 """
@@ -5725,7 +5698,7 @@ entry(
 )
 
 entry(
-    index = 396,
+    index = 394,
     label = "radadd_intra_csH(CdCdCd)",
     group = 
 """
@@ -5739,7 +5712,7 @@ entry(
 )
 
 entry(
-    index = 397,
+    index = 395,
     label = "radadd_intra_csHCt",
     group = 
 """
@@ -5751,7 +5724,7 @@ entry(
 )
 
 entry(
-    index = 398,
+    index = 396,
     label = "radadd_intra_csHCb",
     group = 
 """
@@ -5763,7 +5736,7 @@ entry(
 )
 
 entry(
-    index = 399,
+    index = 397,
     label = "radadd_intra_csNdNd",
     group = 
 """
@@ -5775,7 +5748,7 @@ entry(
 )
 
 entry(
-    index = 400,
+    index = 398,
     label = "radadd_intra_csNdDe",
     group = 
 """
@@ -5787,7 +5760,7 @@ entry(
 )
 
 entry(
-    index = 401,
+    index = 399,
     label = "radadd_intra_csNdCd",
     group = 
 """
@@ -5799,7 +5772,7 @@ entry(
 )
 
 entry(
-    index = 402,
+    index = 400,
     label = "radadd_intra_csNdCt",
     group = 
 """
@@ -5811,7 +5784,7 @@ entry(
 )
 
 entry(
-    index = 403,
+    index = 401,
     label = "radadd_intra_csDeDe",
     group = 
 """
@@ -5823,7 +5796,7 @@ entry(
 )
 
 entry(
-    index = 404,
+    index = 402,
     label = "radadd_intra_O",
     group = 
 """
@@ -5833,7 +5806,7 @@ entry(
 )
 
 entry(
-    index = 405,
+    index = 403,
     label = "radadd_intra_S",
     group = 
 """
@@ -5843,7 +5816,7 @@ entry(
 )
 
 entry(
-    index = 406,
+    index = 404,
     label = "radadd_intra_Cb",
     group = 
 """
@@ -5853,7 +5826,7 @@ entry(
 )
 
 entry(
-    index = 407,
+    index = 405,
     label = "radadd_intra_cdsingle",
     group = 
 """
@@ -5864,7 +5837,7 @@ entry(
 )
 
 entry(
-    index = 408,
+    index = 406,
     label = "radadd_intra_cdsingleH",
     group = 
 """
@@ -5875,7 +5848,7 @@ entry(
 )
 
 entry(
-    index = 409,
+    index = 407,
     label = "radadd_intra_cdsingleNd",
     group = 
 """
@@ -5886,7 +5859,7 @@ entry(
 )
 
 entry(
-    index = 410,
+    index = 408,
     label = "radadd_intra_cdsingleDe",
     group = 
 """
@@ -5897,7 +5870,7 @@ entry(
 )
 
 entry(
-    index = 411,
+    index = 409,
     label = "radadd_intra_cdsingleDe_cb",
     group = 
 """
@@ -5908,7 +5881,7 @@ entry(
 )
 
 entry(
-    index = 412,
+    index = 410,
     label = "radadd_intra_cddouble",
     group = 
 """
@@ -5919,7 +5892,7 @@ entry(
 )
 
 entry(
-    index = 413,
+    index = 411,
     label = "radadd_intra_CO",
     group = 
 """
@@ -5930,7 +5903,7 @@ entry(
 )
 
 entry(
-    index = 414,
+    index = 412,
     label = "radadd_intra_Ct",
     group = 
 """
@@ -6317,10 +6290,8 @@ L1: multiplebond_intra
         L3: triplebond_intra_Nd
         L3: triplebond_intra_De
     L2: benzenebond_intra
-        L3: benzenebond_intra_R
-            L4: benzenebond_intra_RH
-        L3: benzenebond_intra_H
-            L4: benzenebond_intra_HH
+        L3: benzenebond_intra_CbCb
+            L4: benzenebond_intra_CbCbH
         L3: benzenebond_intra_CbCbf
         L3: benzenebond_intra_CbfCb
         L3: benzenebond_intra_CbfCbf
