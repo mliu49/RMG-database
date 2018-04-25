@@ -22,6 +22,7 @@ before_install:
   # This is the RMG-database project, so need to fetch RMG-Py
   - git clone https://github.com/ReactionMechanismGenerator/RMG-Py.git
   - cd RMG-Py
+  - git checkout ring_attributes
 
 install:
   - conda env create -q -f environment_linux.yml
