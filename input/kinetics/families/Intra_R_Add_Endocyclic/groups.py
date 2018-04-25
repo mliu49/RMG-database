@@ -6361,6 +6361,114 @@ L1: radadd_intra
 )
 
 forbidden(
+    label = "Rn2c6_beta_long_phenyl",
+    group = 
+"""
+1 *4 C u0 {2,S} {3,[S,D,T]}
+2 *6 C u0 {1,S} {4,S} {5,D}
+3 *1 C u1 {1,[S,D,T]}
+4 *7 C u0 {2,S} {7,D}
+5    C u0 {2,D} {8,S}
+6 *2 C u0 {7,S} {8,D}
+7 *5 C u0 {4,D} {6,S}
+8 *3 C u0 {5,S} {6,D}
+""",
+    shortDesc = u"""""",
+    longDesc = 
+u"""
+Forbid a carbon radical 2 carbons away from a phenyl side group from adding to the meta-position 
+because the TS would be far too strained.
+""",
+)
+
+forbidden(
+    label = "Rn2c6_beta_short_phenyl",
+    group = 
+"""
+1 *4 C u0 {2,S} {3,[S,D,T]}
+2 *5 C u0 {1,S} {4,D} {5,S}
+3 *1 C u1 {1,[S,D,T]}
+4    C u0 {2,D} {7,S}
+5 *2 C u0 {2,S} {8,D}
+6    C u0 {7,D} {8,S}
+7    C u0 {4,S} {6,D}
+8 *3 C u0 {5,D} {6,S}
+""",
+    shortDesc = u"""""",
+    longDesc = 
+u"""
+Forbid a carbon radical 2 carbons away from a phenyl side group from adding to the meta-position 
+because the TS would be far too strained.
+""",
+)
+
+forbidden(
+    label = "Rn3c6_beta_long_phenyl",
+    group = 
+"""
+1 *6 C u0 {2,S} {3,[S,D,T]}
+2 *7 C u0 {1,S} {4,S} {5,D}
+3 *4 C u0 {1,[S,D,T]} {9,[S,D,T]}
+4 *8 C u0 {2,S} {7,D}
+5    C u0 {2,D} {8,S}
+6 *2 C u0 {7,S} {8,D}
+7 *5 C u0 {4,D} {6,S}
+8 *3 C u0 {5,S} {6,D}
+9 *1 C u1 {3,[S,D,T]}
+""",
+    shortDesc = u"""""",
+    longDesc = 
+u"""
+Forbid a carbon radical 3 carbons away from a phenyl side group from adding to the meta-position 
+because the TS would be far too strained.
+""",
+)
+
+forbidden(
+    label = "Rn3c6_beta_short_phenyl",
+    group = 
+"""
+1 *6 C u0 {2,S} {3,[S,D,T]}
+2 *5 C u0 {1,S} {4,D} {5,S}
+3 *4 C u0 {1,[S,D,T]} {9,[S,D,T]}
+4    C u0 {2,D} {7,S}
+5 *2 C u0 {2,S} {8,D}
+6    C u0 {7,D} {8,S}
+7    C u0 {4,S} {6,D}
+8 *3 C u0 {5,D} {6,S}
+9 *1 C u1 {3,[S,D,T]}
+""",
+    shortDesc = u"""""",
+    longDesc = 
+u"""
+Forbid a carbon radical 3 carbons away from a phenyl side group from adding to the meta-position 
+because the TS would be far too strained.
+""",
+)
+
+forbidden(
+    label = "Rn3c6_gamma_phenyl",
+    group = 
+"""
+1 *6 C u0 {2,S} {3,[S,D,T]}
+2 *7 C u0 {1,S} {4,S} {5,D}
+3 *4 C u0 {1,[S,D,T]} {9,[S,D,T]}
+4    C u0 {2,S} {7,D}
+5 *5 C u0 {2,D} {8,S}
+6 *3 C u0 {7,S} {8,D}
+7    C u0 {4,D} {6,S}
+8 *2 C u0 {5,S} {6,D}
+9 *1 C u1 {3,[S,D,T]}
+""",
+    shortDesc = u"""""",
+    longDesc = 
+u"""
+Forbid a carbon radical 3 carbons away from a phenyl side group from adding to the para-position 
+because the TS would be far too strained.
+""",
+)
+
+forbidden(
     label = "bond31",
     group = 
 """
