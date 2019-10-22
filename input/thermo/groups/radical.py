@@ -8718,7 +8718,7 @@ entry(
     thermo = ThermoData(
         Tdata = ([300,400,500,600,800,1000,1500],'K'),
         Cpdata = ([-0.762975,-1.091932,-1.454467,-1.908359,-2.748445,-3.446538,-4.576528],'cal/(mol*K)','+|-',[0.226952,0.226952,0.226952,0.226952,0.226952,0.226952,0.226952]),
-        H298 = (31.565243,'kcal/mol','+|-',0.869131),
+        H298 = (85.037683,'kcal/mol','+|-',0.869131),
         S298 = (1.433096,'cal/(mol*K)','+|-',0.350884),
     ),
     shortDesc = u"""Calculations from Hexylbenzene Library, Lawrence Lai""",
@@ -8731,8 +8731,9 @@ http://pubs.acs.org/doi/abs/10.1021/acs.jpca.5b05448
 
 Model Species used include:
 C1=CC=C2C=CC[CH]C2=C1
-C[C]1CC=CC2=CC=CC=C12
-CC[C]1CC=CC2=CC=CC=C12
+
+Modified 10/2019 by Max Liu. Added enthalpy of H atom so that GAV predicted
+enthalpy for C1=CC=C2C=CC[CH]C2=C1 matches calculated value.
 """,
 )
 
