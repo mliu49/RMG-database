@@ -9762,6 +9762,36 @@ Fitted from CBS-QB3 calculation for C1=CC2=C(C=C1)CC1CC1=C2. Mengjie Liu 10/22/1
 """,
 )
 
+entry(
+    index = 235,
+    label = "s2_s2_s4_6_6_6_5ene",
+    group =
+"""
+1    R!H u0 p0 c0 {2,S} {3,S} {5,S}
+2    R!H u0 p0 c0 {1,S} {6,D} {8,S}
+3    R!H u0 p0 c0 {1,S} {7,S} {9,D}
+4  * R!H u0 p0 c0 {6,S} {7,D} {10,S}
+5    R!H u0 p0 c0 {1,S} {10,D}
+6    R!H u0 p0 c0 {2,D} {4,S}
+7    R!H u0 p0 c0 {3,S} {4,D}
+8    R!H u0 p0 c0 {2,S} {11,D}
+9    R!H u0 p0 c0 {3,D} {11,S}
+10   R!H u0 p0 c0 {4,S} {5,D}
+11   R!H u0 p0 c0 {8,D} {9,S}
+""",
+    thermo = ThermoData(
+        Tdata = ([300, 400, 500, 600, 800, 1000, 1500],'K'),
+        Cpdata = ([-11.327, -11.768, -11.530, -10.808, -8.938, -7.248, -6.477],'cal/(mol*K)'),
+        H298 = (118.078,'kcal/mol'),
+        S298 = (93.217,'cal/(mol*K)'),
+    ),
+    shortDesc = u"""Fitted from CBS-QB3 calculation""",
+    longDesc =
+u""""
+Fitted from CBS-QB3 calculation for C1=CC2=CC3=CC(=C1)C2C=C3. Mengjie Liu 11/6/19.
+""",
+)
+
 tree(
 """
 L1: PolycyclicRing
@@ -10047,6 +10077,7 @@ L1: PolycyclicRing
             L4: s2_6_6_tetraene_0_2_6_8
             L4: s2_6_6_tetraene_0_3_6_8
                 L5: s2_s2_s3_6_6_5_diene_diene
+                L5: s2_s2_s4_6_6_6_5ene
             L4: s2_6_6_tetraene_1_3_6_8
         L3: s2_6_6_ben
         L3: s2_6_6_ben_ene
